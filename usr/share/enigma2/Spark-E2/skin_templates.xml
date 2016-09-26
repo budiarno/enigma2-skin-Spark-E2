@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+
+	<screen name="ServiceInfoTemplate">
+<!--		<panel name="MidleScreenTemplate"/>
+		<eLabel text="Service info" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="infolist" position="center,0" size="744,460" selectionDisabled="1" itemHeight="31"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYB_BigLeft">
+		<eLabel name="Line" position="69,613" size="732,1" backgroundColor="lineback"/>
+		<widget name="key_red" position="69,614" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="253,614" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_yellow" position="437,614" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="621,614" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="69,648" size="180,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="253,648" size="180,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="437,648" size="180,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="621,648" size="180,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="MovieRGYBButton">
+		<eLabel name="Line" position="0,449" size="1066,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merah.png" position="0,458" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_red" position="56,466" size="180,34" font="Regular;28" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijau.png" position="246,458" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_green" position="302,466" size="180,34" font="Regular;28" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuning.png" position="492,458" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_yellow" position="548,466" size="180,34" font="Regular;28" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/biru.png" position="738,458" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_blue" position="794,466" size="180,34" font="Regular;28" halign="left" valign="center" transparent="1"/>
+		<widget source="global.CurrentTime" render="Label" position="976,466" size="75,34" font="Replacement;28" halign="left" foregroundColor="foreground">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_RGYB">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="0,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="186,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="372,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/birum.png" position="558,470" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYB">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="0,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget name="key_red" position="40,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="186,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget name="key_green" position="226,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="372,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget name="key_yellow" position="412,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+    	<ePixmap pixmap="Spark-E2/buttons/birum.png" position="558,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget name="key_blue" position="598,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYBS">
+		<panel name="ButtonTemplate_Midle_RGYB"/>
+		<widget source="key_red" render="Label" position="40,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget source="key_green" render="Label" position="226,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget source="key_yellow" render="Label" position="412,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget source="key_blue" render="Label" position="598,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Small_RGYB">
+		<eLabel name="Line" position="10,397" size="640,1" backgroundColor="lineback"/>
+		<eLabel name="Red" position="30,432" size="120,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="190,432" size="120,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="350,432" size="120,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="510,432" size="120,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYB_Small">
+		<panel name="ButtonTemplate_Small_RGYB"/>
+		<widget name="key_red" position="10,398" size="160,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="170,398" size="160,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_yellow" position="330,398" size="160,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="490,398" size="160,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYB_Big">
+		<eLabel name="Line" position="0,512" size="1100,1" backgroundColor="bluespark"/>
+    <ePixmap pixmap="Spark-E2/buttons/merah.png" position="20,514" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_red" position="86,526" size="189,33" font="Regular;22" halign="left" valign="center"/>
+    <ePixmap pixmap="Spark-E2/buttons/hijau.png" position="295,514" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_green" position="361,526" size="189,33" font="Regular;22" halign="left" valign="center"/>
+    <ePixmap pixmap="Spark-E2/buttons/kuning.png" position="570,514" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_yellow" position="630,526" size="189,33" font="Regular;22" halign="left" valign="center"/>
+    <ePixmap pixmap="Spark-E2/buttons/biru.png" position="825,514" size="46,46" alphatest="on" zPosition="4"/>
+		<widget name="key_blue" position="885,526" size="200,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYS">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="19,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_red" render="Label" position="68,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="267,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_green" render="Label" position="316,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="515,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_yellow" render="Label" position="567,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_R">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="322,470" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_R_Midle">
+		<panel name="ButtonTemplate_Midle_R"/>
+		<widget name="key_red" position="372,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RS_Midle">
+		<panel name="ButtonTemplate_Midle_R"/>
+		<widget source="key_red" render="Label" position="372,470" size="240,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_R">
+		<eLabel name="Line" position="center,523" size="600,1" backgroundColor="lineback"/>
+		<eLabel name="Red" position="center,558" size="180,1" foregroundColor="red" backgroundColor="red"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_RG">
+		<eLabel name="Line" position="center,340" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="19,350" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="290,350" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_RGYB">
+		<eLabel name="Line" position="center,368" size="680,1" backgroundColor="bluespark"/>
+		<eLabel name="Red" position="10,399" size="150,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="180,399" size="150,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="350,399" size="150,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="520,399" size="150,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_RGY">
+		<eLabel name="Line" position="center,340" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="19,350" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="199,350" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="379,350" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_YB">
+		<eLabel name="Line" position="center,523" size="600,1" backgroundColor="lineback"/>
+		<eLabel name="Yellow" position="415,558" size="180,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="685,558" size="180,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="ButtonTemplate_R_Minimal">
+		<panel name="ButtonTemplate_Minimal_R"/>
+		<widget name="key_red" position="center,370" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_R_Minimal2">
+		<eLabel name="Line" position="center,368" size="600,1" backgroundColor="bluespark"/>
+		<eLabel name="Red" position="center,399" size="180,1" foregroundColor="red" backgroundColor="red"/>
+		<widget name="key_red" position="center,370" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGS_Minimal">
+		<panel name="ButtonTemplate_Minimal_RG"/>
+		<widget source="key_red" render="Label" position="59,350" size="271,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_green" render="Label" position="330,350" size="271,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYBS_Minimal">
+		<panel name="ButtonTemplate_Minimal_RGYB"/>
+		<widget source="key_red" render="Label" position="0,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="170,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="340,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="510,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_YB_Minimal">
+		<panel name="ButtonTemplate_Minimal_YB"/>
+		<widget name="key_yellow" position="380,524" size="250,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="650,524" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_RG">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="50,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="422,470" size="30,30" alphatest="on" zPosition="4"/>
+<!--		<eLabel name="Red" position="96,499" size="180,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="468,499" size="180,1" foregroundColor="green" backgroundColor="green"/> -->
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_RGB">
+		<eLabel name="Line" position="center,468" size="744,1" backgroundColor="bluespark"/>
+		<eLabel name="Red" position="24,499" size="200,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="center,499" size="200,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Blue" position="520,499" size="200,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_RB">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="72,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/birum.png" position="444,470" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Midle_RY">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="72,470" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="444,470" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_CancelOK_Midle">
+		<panel name="ButtonTemplate_Midle_RG"/>
+		<widget name="canceltext" position="380,614" size="250,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="oktext" position="650,614" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_CancelScan_Midle">
+		<panel name="ButtonTemplate_Midle_RG"/>
+		<eLabel text="Cancel" position="106,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+		<eLabel text="Scan" position="478,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RG_Midle">
+		<panel name="ButtonTemplate_Midle_RG"/>
+		<widget name="key_red" position="90,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+		<widget name="key_green" position="462,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGB">
+		<eLabel name="Line" position="center,460" size="744,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="19,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_red" render="Label" position="68,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="267,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_green" render="Label" position="316,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+    	<ePixmap pixmap="Spark-E2/buttons/birum.png" position="515,470" size="30,30" alphatest="on" zPosition="4"/>
+		<widget source="key_blue" render="Label" position="567,470" size="180,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGS_Midle">
+		<panel name="ButtonTemplate_Midle_RG"/>
+		<widget source="key_red" render="Label" position="106,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_green" render="Label" position="478,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RBS_Midle">
+		<panel name="ButtonTemplate_Midle_RB"/>
+		<widget source="key_red" render="Label" position="122,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_blue" render="Label" position="494,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RYS_Midle">
+		<panel name="ButtonTemplate_Midle_RY"/>
+		<widget source="key_red" render="Label" position="122,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_yellow" render="Label" position="494,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Small_RG">
+		<eLabel name="Line" position="20,460" size="560,1" backgroundColor="lineback"/>
+		<eLabel name="Red" position="75,495" size="180,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="345,495" size="180,1" foregroundColor="green" backgroundColor="green"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RG_Small">
+		<panel name="ButtonTemplate_Small_RG"/>
+		<widget name="key_red" position="40,461" size="250,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="310,461" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGS_Small">
+		<panel name="ButtonTemplate_Small_RG"/>
+		<widget source="key_red" render="Label" position="40,461" size="250,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="310,461" size="250,33" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGBS_Small">
+		<eLabel name="Line" position="20,460" size="560,1" backgroundColor="lineback"/>
+		<widget source="key_red" render="Label" position="35,461" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="center,461" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="395,461" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="30,495" size="180,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="center,495" size="180,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Blue" position="390,495" size="180,1" foregroundColor="green" backgroundColor="green"/>
+	</screen>
+
+	<screen name="Big2PanelsTemplate">
+		<panel name="ButtonTemplate_RGYB_BigLeft"/>
+		<eLabel position="62,center" size="745,592" zPosition="-10" backgroundColor="back"/>
+		<ePixmap pixmap="Spark-E2/window/back.png" position="63,64" size="745,42" alphatest="blend" zPosition="-9"/>
+		<eLabel name="Line" position="62,63" size="745,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="62,656" size="745,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="62,63" size="1,592" backgroundColor="lineback"/>
+		<eLabel name="Line" position="807,63" size="1,592" backgroundColor="lineback"/>
+		<eLabel position="842,center" size="362,592" zPosition="-10" backgroundColor="back"/>
+		<ePixmap pixmap="Spark-E2/window/back.png" position="843,64" size="362,42" alphatest="blend" zPosition="-9"/>
+		<eLabel name="Line" position="842,63" size="362,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="842,656" size="362,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="842,63" size="1,592" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1204,63" size="1,592" backgroundColor="lineback"/>
+	</screen>
+
+	<screen name="ThirdInfoBar">
+		<eLabel position="center,center" size="900,450" zPosition="-10" backgroundColor="#300a1794" alphatest="blend" transparent="0"/>
+		<!--<ePixmap pixmap="Spark-E2/window/back.png" position="68,68" size="737,40" alphatest="off" zPosition="-9"/> -->
+		<eLabel name="Line" position="center,134" size="901,4" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,585" size="901,4" backgroundColor="lineback"/>
+		<eLabel name="Line" position="189,center" size="4,451" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1086,center" size="4,452" backgroundColor="lineback"/>
+		<eLabel text="Channel Name" position="240,200" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Satellite" position="240,254" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="TP" position="240,308" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="PID" position="240,362" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Signal Strength" position="240,416" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Signal Quality" position="240,470" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+
+		<widget font="Replacement;26" foregroundColor="hellgreen" halign="left" noWrap="1" position="550,200" render="Label" size="352,34" source="session.CurrentService" transparent="1" valign="top" zPosition="-5">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+        <widget source="session.CurrentService" render="Label" position="550,254" size="380,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+            <convert type="QuickServName2">%S</convert>
+        </widget>
+		<widget source="session.CurrentService" render="Label" position="550,308" size="380,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+           <convert type="QuickServName">%F %p %Y %f %M %s</convert>
+        </widget>
+		<widget source="session.CurrentService" render="Label" position="550,362" size="500,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+           <convert type="QuickEcmInfo">pids</convert>
+        </widget>
+
+		<!-- LNB -->
+		<widget source="session.FrontendStatus" render="Progress" position="500,419" size="450,22" pixmap="Spark-E2/icons/agc-scan450.png" alphatest="blend" borderWidth="1" borderColor="#656565" valign="center" backgroundColor="#30c6c8c6" transparent="0">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="970,416" size="100,25" font="Replacement;26" foregroundColor="#AAAAAA" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+
+		<!-- SNR -->
+		<widget source="session.FrontendStatus" render="Progress"  position="500,473" size="450,22" pixmap="Spark-E2/icons/snr-scan450.png" alphatest="blend" zPosition="1" borderWidth="1" borderColor="#656565" valign="center" backgroundColor="#30c6c8c6" transparent="0">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="970,470" size="100,25" font="Replacement;26" foregroundColor="#AAAAAA" transparent="1" >
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
+
+	<screen name="Golsat2ndInfoBar">
+		<eLabel position="center,center" size="900,450" zPosition="-10" backgroundColor="#300a1794" alphatest="blend" transparent="0"/>
+		<!--<ePixmap pixmap="Spark-E2/window/back.png" position="68,68" size="737,40" alphatest="off" zPosition="-9"/> -->
+		<eLabel name="Line" position="center,134" size="901,4" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,585" size="901,4" backgroundColor="lineback"/>
+		<eLabel name="Line" position="189,center" size="4,451" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1086,center" size="4,452" backgroundColor="lineback"/>
+		<eLabel text="Channel Name" position="240,200" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Satellite" position="240,254" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="TP" position="240,308" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="PID" position="240,362" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Signal Strength" position="240,416" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel text="Signal Quality" position="240,470" size="200,34" halign="left" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+
+		<widget font="Replacement;26" foregroundColor="hellgreen" halign="left" noWrap="1" position="550,200" render="Label" size="352,34" source="session.CurrentService" transparent="1" valign="top" zPosition="-5">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+        <widget source="session.CurrentService" render="Label" position="550,254" size="380,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+            <convert type="QuickServName2">%S</convert>
+        </widget>
+		<widget source="session.CurrentService" render="Label" position="550,308" size="380,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+           <convert type="QuickServName2">%F %p %Y %f %M %s</convert>
+        </widget>
+		<widget source="session.CurrentService" render="Label" position="550,362" size="500,34" font="Replacement;26" halign="left" backgroundColor="#000000" foregroundColor="hellgreen" transparent="1">
+           <convert type="QuickEcmInfo">pids</convert>
+        </widget>
+
+		<!-- LNB -->
+		<widget source="session.FrontendStatus" render="Progress" position="500,419" size="450,22" pixmap="Spark-E2/icons/agc-scan450.png" alphatest="blend" borderWidth="1" borderColor="#656565" valign="center" backgroundColor="#30c6c8c6" transparent="0">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="970,416" size="100,25" font="Replacement;26" foregroundColor="#AAAAAA" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+
+		<!-- SNR -->
+		<widget source="session.FrontendStatus" render="Progress"  position="500,473" size="450,22" pixmap="Spark-E2/icons/snr-scan450.png" alphatest="blend" zPosition="1" borderWidth="1" borderColor="#656565" valign="center" backgroundColor="#30c6c8c6" transparent="0">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="970,470" size="100,25" font="Replacement;26" foregroundColor="#AAAAAA" transparent="1" >
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
+
+	<screen name="Big2PanelsSecondPanelTemplate">
+		<eLabel name="Button" position="862,560" size="83,33" backgroundColor="selection"/>
+		<eLabel name="Button" position="862,599" size="83,33" backgroundColor="selection"/>
+		<widget source="global.CurrentTime" render="Label" position="861,525" size="321,29" font="Replacement;22" halign="center" foregroundColor="green">
+			<convert type="ClockToText">Format: %A - %d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="972,550" size="139,83" font="Regular;80" valign="center" halign="right" text="22" foregroundColor="foreground">
+			<convert type="ClockToText">Format:%H</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1109,559" size="90,46" font="Regular;45" valign="center" foregroundColor="foreground">
+			<convert type="ClockToText">Format::%M</convert>
+		</widget>
+	</screen>
+
+	<screen name="MovieSelectionSmallpanelTemplate">
+<!--		<panel name="ButtonTemplate_RGYB_BigLeft"/>
+		<panel name="Big2PanelsSecondPanelTemplate"/>-->
+		<widget name="list" position="0,0" size="680,390" enableWrapAround="1" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeights="65,33,41" fontSizesOriginal="41,38,38" fontSizesCompact="34,28" fontSizesMinimal="28,22"/>
+		<ePixmap pixmap="Spark-E2/icons/sipeker.png" position="720,0" size="143,143" alphatest="blend" zPosition="-1"/>
+		<ePixmap pixmap="Spark-E2/icons/sipeker.png" position="893,0" size="143,143" alphatest="blend" zPosition="-1"/>
+		<eLabel name="Line" position="690,148" size="376,1" backgroundColor="bluespark"/>
+		<eLabel name="Line" position="710,168" size="336,1" backgroundColor="bluespark"/>
+    	<widget source="session.CurrentService" render="PositionGauge" position="710,162" size="336,12" transparent="1" zPosition="4" pointer="PLi-HD/dvr/position_pointer1.png:417,0">
+      		<convert type="ServicePosition">Gauge</convert>
+    	</widget>
+		<eLabel name="Line" position="690,188" size="376,1" backgroundColor="bluespark"/>
+    	<widget source="session.CurrentService" render="Label" position="690,198" size="117,36" backgroundColor="bsback" transparent="1" zPosition="4" foregroundColor="teks" borderWidth="2" font="Regular;28" borderColor="black" valign="center" halign="left">
+      		<convert type="ServicePosition">Position,ShowHours</convert>
+    	</widget>
+    	<widget source="session.CurrentService" render="Label" position="949,198" size="117,36" backgroundColor="bsback" transparent="1" zPosition="4" foregroundColor="teks" borderWidth="2" font="Regular;28" borderColor="black" valign="center" halign="right">
+      		<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
+    	</widget>
+		<eLabel name="Line" position="690,239" size="376,1" backgroundColor="bluespark"/>
+    	<widget source="Service" render="Label" position="690,245" size="376,145"  font="Regular;28" valign="top" transparent="1">
+      		<convert type="MovieInfo">MetaDescription</convert>
+    	</widget>
+		<eLabel name="Line" position="690,390" size="376,1" backgroundColor="bluespark"/>
+		<eLabel name="Filesize" position="690,400" size="188,36" text="File size:" font="Regular;28" foregroundColor="teks" halign="left" transparent="1"/>
+    	<widget source="Service" render="Label" position="888,400" size="188,36" transparent="1" foregroundColor="teks" font="Regular;28">
+      		<convert type="MovieInfo">FileSize</convert>
+    	</widget>
+<!--		<eLabel name="Description" position="690,0" size="352,30" text="Description" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" halign="center" transparent="1"/>
+		<widget source="Service" render="Label" position="847,107" size="352,28" font="Regular;24" halign="center">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="848,140" size="349,360" font="Regular;20" halign="center">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<eLabel name="Menu" position="867,565" size="75,22" text="Menu" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+		<eLabel name="Exit" position="867,604" size="75,22" text="Exit" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/> -->
+	</screen>
+
+	<screen name="MenuTemplate">
+		<eLabel position="center,center" size="744,592" zPosition="-2" backgroundColor="bsback"/>
+<!--		<eLabel position="center,607" size="744,50" zPosition="-1" backgroundColor="titleback"/> -->
+<!--		<ePixmap pixmap="Spark-E2/window/GoldsatMenuBack.png" position="368,63" size="544,42" alphatest="blend" zPosition="-1"/> -->
+<!--		<eLabel backgroundColor="#30006cf6" position="380,71" size="526,42" transparent="1" zPosition="-5" />
+		<eLabel name="Line" position="center,63" size="544,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,656" size="544,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="368,center" size="1,592" backgroundColor="lineback"/>
+		<eLabel name="Line" position="911,center" size="1,592" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,605" size="522,1" backgroundColor="lineback"/>
+		<eLabel position="0,113" size="1280,162" zPosition="-5" backgroundColor="back"/>
+		<eLabel name="Line" position="center,113" size="1280,1" zPosition="-4" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,274" size="1280,1" zPosition="-4" backgroundColor="lineback"/>
+		<widget source="title" render="Label" position="0,0" size="522,41" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,0" size="444,450" scrollbarMode="showNever" selectionPixmap="Spark-E2/menu/sel_menu.png" backgroundPixmap="Spark-E2/menu/bg40x40.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (0,6), size = (444,32), flags = RT_HALIGN_LEFT, text =0) ],
+				"fonts": [gFont("Regular",28)],
+				"itemHeight":55 }
+			</convert>
+		</widget>
+		<eLabel name="Line" position="0,468" size="744,1" backgroundColor="bluespark"/>
+		<widget source="session.CurrentService" render="Label" position="center,470" size="522,34" font="Replacement;22" halign="center" foregroundColor="teks" backgroundColor="bsback" valign="center" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="454,302" size="290,48" font="Regular;42" valign="center" halign="center" text="22" foregroundColor="teks">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="454,360" size="290,29" font="Replacement;22" halign="center" foregroundColor="teks">
+			<convert type="ClockToText">Format: %A - %d.%m.%Y</convert>
+		</widget>
+	</screen>
+
+	<screen name="ScanTemplate">
+		<panel name="MidleScreen_CancelScan_Template"/>
+<!--		<widget name="header" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,380" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="MinimalScreenTemplate">
+		<eLabel position="center,center" size="620,420" zPosition="-10" backgroundColor="bsback"/>
+<!--		<ePixmap pixmap="Spark-E2/window/GoldsatMenuBack620.png" position="center,151" size="620,42" alphatest="blend" zPosition="-9"/> -->
+		<eLabel name="Line" position="center,150" size="620,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,570" size="620,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="330,center" size="1,420" backgroundColor="lineback"/>
+		<eLabel name="Line" position="949,center" size="1,420" backgroundColor="lineback"/>
+	</screen>
+
+	<screen name="MidleScreenTemplate">
+		<eLabel position="center,center" size="744,500" zPosition="-10" backgroundColor="bsback"/>
+<!--		<ePixmap pixmap="Spark-E2/window/GoldsatMenuBack745.png" position="center,64" size="745,42" alphatest="blend" zPosition="-9"/> -->
+		<eLabel name="Line" position="center,63" size="745,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,656" size="745,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="267,center" size="1,592" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1011,center" size="1,592" backgroundColor="lineback"/>
+	</screen>
+
+	<screen name="BigScreenTemplate">
+		<eLabel position="center,30" size="1178,627" zPosition="-10" backgroundColor="back"/>
+<!--		<ePixmap pixmap="Spark-E2/window/GoldsatMenuBack1178.png" position="center,29" size="1178,42" alphatest="blend" zPosition="-9"/> -->
+		<eLabel name="Line" position="center,30" size="1178,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,656" size="1178,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="51,30" size="1,627" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1228,30" size="1,627" backgroundColor="lineback"/>
+	</screen>
+
+	<screen name="AutoMountTemplate">
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="introduction" render="Label" position="center,400" size="744,40" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="AutoMountConfigTemplate">
+		<panel name="MidleScreen_RS_Template"/>
+		<panel name="AutoMountTemplate"/>
+		<widget name="config" position="center,0" size="744,390" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>		
+		<widget name="VKeyIcon" pixmap="Spark-E2/buttons/key_text.png" position="310,570" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
+		<widget name="HelpWindow" position="400,420" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
+	</screen>
+
+	<screen name="MinimalScreen_R_Template">
+		<panel name="MinimalScreenTemplate"/>
+		<panel name="ButtonTemplate_R_Minimal"/>
+	</screen>
+
+	<screen name="MinimalScreen_RGS_Template">
+<!--		<panel name="MinimalScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGS_Minimal"/>
+	</screen>
+
+	<screen name="MinimalScreen_RGYBS_Template">
+		<panel name="MinimalScreenTemplate"/>
+		<panel name="ButtonTemplate_RGYBS_Minimal"/>
+	</screen>
+
+	<screen name="MinimalScreen_YB_Template">
+		<panel name="MinimalScreenTemplate"/>
+		<panel name="ButtonTemplate_YB_Minimal"/>
+	</screen>
+
+	<screen name="MidleScreen_RGYB_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGYB"/>
+	</screen>
+
+	<screen name="MidleScreen_RGYBS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGYBS"/>
+	</screen>
+
+	<screen name="MidleScreen_RGYS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGYS"/>
+	</screen>
+
+	<screen name="MidleScreen_CancelOK_Template">
+		<panel name="MidleScreenTemplate"/>
+		<panel name="ButtonTemplate_CancelOK_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_CancelScan_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_CancelScan_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_R_Template">
+		<panel name="MidleScreenTemplate"/>
+		<panel name="ButtonTemplate_R_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_RG_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RG_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_RGB_Template">
+		<panel name="MidleScreenTemplate"/>
+		<panel name="ButtonTemplate_RGB"/>
+	</screen>
+
+	<screen name="MidleScreen_RS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RS_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_RGS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGS_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_RBS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RBS_Midle"/>
+	</screen>
+
+	<screen name="MidleScreen_RYS_Template">
+<!--		<panel name="MidleScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RYS_Midle"/>
+	</screen>
+
+	<screen name="BigScreen_RGYB_Template">
+<!--		<panel name="BigScreenTemplate"/> -->
+		<panel name="ButtonTemplate_RGYB"/>
+	</screen>
+
+</skin>
+

@@ -1,4 +1,4 @@
-# Enigma2-SH4-Skin
-Skins for Enigma2 on SH4 especially for Spark receivers.
+# Spark-E2 Skin
+This skin is based on MetropolisHD originally included on Taapat Enigma2 OpenPLi5 image.
 
-This is initial github repo for the skins I've edited.
+Would be updated later.
