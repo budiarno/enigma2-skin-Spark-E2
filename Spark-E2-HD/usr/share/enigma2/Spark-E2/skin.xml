@@ -1,0 +1,2186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<skin>
+	<!-- DONT REMOVE THIS DISCLAIMER -->
+	<!-- MetropolisHD Skin for Enigma2 - By Franc -->
+	<!-- Version 1.0.1 -->
+	<!-- This skin and all it's graphics are free, do whatever you want with this skin but only for personal use, and don't tell it's yours, or your idea! -->
+	<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications. -->
+	<!-- If you want to contact me i usually hang on www.satforum.me or on e-mail sateliteacc([at])gmail.com -->
+	<!-- Modified by pybear38 on 2014.09 http://www.patyanradio.com/img/ -->
+	<!-- Modified by Taapat https://github.com/Taapat/skin-Spark-E2/commits/master -->
+	<!-- Modified by Budiarno on March 27th 2016 http://www.dvbs.org -->
+	<!-- Modified by Budiarno on July 30th 2016 http://www.dvbs.org -->
+	<!-- Modified by Budiarno on September 17th 2016 http://www.dvbs.org -->
+
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32"/>
+	</output>
+
+	<colors>
+		<color name="black" value="#00000000"/>
+		<color name="blue" value="#000070eb"/>
+		<color name="darkgrey" value="#00888888"/>
+		<color name="green" value="#00389416"/>
+		<color name="grey" value="#008f8f8f"/>
+		<color name="hellgreen" value="#2256c856"/>
+		<color name="back" value="#301a3ab5"/>
+		<color name="red" value="#00ff2525"/>
+		<color name="selection" value="#304f99e0"/>
+		<color name="transparent" value="#ffffffff"/>
+		<color name="transpBlack" value="#41000000"/>
+		<color name="transpGrey" value="#41444444"/>
+		<color name="foreground" value="#21e2e2e2"/>
+		<color name="progressback" value="#254f7497"/>
+		<color name="textback" value="#00333333"/>
+		<color name="lineback" value="#304f99e0"/>
+		<color name="border" value="#00cccccc"/>
+		<color name="white" value="#00dae1e7"/>
+		<color name="yellow" value="#00bab329"/>
+		<color name="titleback" value="#4f99e0"/>
+		<color name="titlefore" value="#1a3ab5"/>
+		<color name="putih" value="#00dae1e7"/>
+		<color name="teks" value="#eceef3"/>
+		<color name="bsback" value="#101010"/>
+		<color name="bluespark" value="#2273b5"/>
+	</colors>
+
+	<fonts>
+		<font filename="lcd.ttf" name="LCD" scale="100"/>
+		<font filename="md_khmurabi_10.ttf" name="Replacement" scale="100" replacement="1"/>
+		<font filename="tuxtxt.ttf" name="Console" scale="100"/>
+		<font filename="DroidSans.ttf" name="Regular" scale="100"/>
+		<font filename="OpenSans-Regular.ttf" name="OpenSans" scale="100"/>
+	</fonts>
+
+	<parameters>
+		<parameter name="AboutHddSplit" value="1"/>
+	</parameters>
+
+	<windowstyle type="skinned" id="0">
+		<title offset="50,19" size="100%,100%" halign="center" font="Replacement;22"/>
+		<color name="Background" color="bsback"/>
+		<color name="LabelForeground" color="white"/>
+		<color name="ListboxBackground" color="bsback"/>
+		<color name="ListboxForeground" color="white"/>
+		<color name="ListboxSelectedBackground" color="bluespark"/>
+		<color name="ListboxSelectedForeground" color="white"/>
+		<color name="ListboxMarkedBackground" color="black"/>
+		<color name="ListboxMarkedForeground" color="red"/>
+		<color name="ListboxMarkedAndSelectedBackground" color="selection"/>
+		<color name="ListboxMarkedAndSelectedForeground" color="red"/>
+		<color name="WindowTitleForeground" color="teks"/>
+		<color name="WindowTitleBackground" color="bluespark"/>
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft" filename="Spark-E2/infobar/b_tl.png"/>
+			<pixmap pos="bpTop" filename="Spark-E2/infobar/b_t.png"/>
+			<pixmap pos="bpTopRight" filename="Spark-E2/infobar/b_tr.png"/>
+			<pixmap pos="bpLeft" filename="Spark-E2/infobar/b_l.png"/>
+			<pixmap pos="bpRight" filename="Spark-E2/infobar/b_r.png"/>
+			<pixmap pos="bpBottomLeft" filename="Spark-E2/infobar/b_bl.png"/>
+			<pixmap pos="bpBottom" filename="Spark-E2/infobar/b_b.png"/>
+			<pixmap pos="bpBottomRight" filename="Spark-E2/infobar/b_br.png"/>
+		</borderset>
+	</windowstyle>
+
+	<include filename="skin_templates.xml"/>
+	<include filename="Infobar.xml"/>
+	<include filename="Infobar2.xml"/>
+
+	<!-- Infobar Ori
+	<screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+		<panel name="InfoBarTemplate"/>
+	</screen> -->
+
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,450" size="1100,209" title="InfoBar">
+		<panel name="Spark-E2"/>
+	</screen>
+
+	<screen name="SecondInfoBar" title="Matrix Spark Channel Information" position="center,140" size="1066,274" backgroundColor="bsback">
+		<panel name="infobartemplate"/>	
+	</screen>
+
+	<screen name="InfoBarKetiga" flags="wfNoBorder" position="center,center" size="1280,720" backgroundColor="transparent">
+		<panel name="GoldsatInfobar"/>		
+	</screen>
+
+	<screen name="ChannelSelection" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/>
+<!--		<panel name="Big2PanelsTemplate"/> -->
+<!--		<widget source="Title" render="Label" position="110,72" size="560,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" noWrap="1" transparent="1"/> -->
+		<widget name="list" position="0,0" size="680,437" scrollbarMode="showAlways" picServiceEventProgressbar="Spark-E2/chnsel/pl.png" sliderPixmap="Spark-E2/window/slider_vert.png" foregroundColorServiceNotAvail="#444444" colorServiceDescriptionSelected="hellgreen" serviceItemHeight="43" serviceNumberFont="Regular;33" serviceNameFont="Regular;33" serviceInfoFont="Regular;26" colorEventProgressbarBorderSelected="#000000"/>
+		<ePixmap pixmap="Spark-E2/buttons/menu.png" position="750,0" size="70,30" alphatest="blend" zPosition="-2"/>
+		<ePixmap pixmap="Spark-E2/buttons/info.png" position="935,0" size="70,30" alphatest="blend" zPosition="-2"/>
+<!--		<widget source="ServiceEvent" render="Label" position="690,0" size="370,34" halign="center" font="Replacement;22" foregroundColor="teks" backgroundColor="bsback" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget> -->
+		<widget source="ServiceEvent" render="Label" position="690,35" size="376,45" halign="center" font="Regular;20" foregroundColor="foreground" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Picon" position="735,85" size="100,60" transparent="1" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="ServiceEvent" render="MetPiconProv" position="920,85" size="100,60" transparent="1" alphatest="blend">
+			<convert type="MetProvider"/>
+		</widget>
+		<eLabel name="Line" position="690,150" size="376,1" backgroundColor="bluespark"/>
+		<widget source="ServiceEvent" render="Label" position="690,155" size="128,28" halign="center" font="OpenSans;20" foregroundColor="hellgreen">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"/>
+		</widget>
+		<eLabel name="Line" position="818,169" size="120,1" backgroundColor="lineback"/>
+		<widget source="ServiceEvent" render="Progress" position="818,168" size="120,4" zPosition="2" pixmap="Spark-E2/window/slider.png" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="938,155" size="125,28" halign="center" font="OpenSans;20" foregroundColor="hellgreen">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<eLabel name="Line" position="690,188" size="376,1" backgroundColor="lineback"/>
+		<widget source="ServiceEvent" render="Label" position="690,193" size="376,148" font="Regular;25" foregroundColor="foreground">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<eLabel name="Line" position="690,346" size="376,1" backgroundColor="lineback"/>
+		<widget source="ServiceEvent" render="Label" position="690,354" size="376,26" halign="center" font="Regular;18" noWrap="1" foregroundColor="foreground">
+			<convert type="TransponderInfo"/>
+		</widget>
+		<eLabel name="Line" position="690,385" size="376,1" backgroundColor="lineback"/>
+		<widget source="ServiceEvent" render="NextEpgInfo" position="690,391" size="376,50" halign="center" font="Replacement;22" foregroundColor="yellow"/>
+		<eLabel name="Line" position="690,441" size="376,1" backgroundColor="lineback"/>
+<!--		<eLabel name="Button" position="680,600" size="83,33" backgroundColor="selection"/>
+		<eLabel name="EPG" position="695,605" size="75,22" text="EPG" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/> -->
+<!--		<eLabel name="Button" position="925,600" size="83,33" backgroundColor="selection"/>
+		<eLabel name="Menu" position="929,605" size="75,22" text="Menu" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/> -->
+	</screen>
+
+	<screen name="UnhandledKey" position="center,200" size="64,64" zPosition="100" flags="wfNoBorder" backgroundColor="bsback">
+		<widget name="UnhandledKeyPixmap" pixmap="Spark-E2/icons/error.png" position="6,2" size="53,65" alphatest="on"/>
+	</screen>
+
+  <!-- Volume -->
+  <screen name="Volume" title="Volume" position="25,245" size="35,260" backgroundColor="#301a3ab5" zPosition="1" flags="wfNoBorder">
+    <widget name="Volume" pixmap="Spark-E2/infobar/volumeslider.png" position="5,35" size="25,200" orientation="orBottomToTop" transparent="1" zPosition="1"/>
+    <ePixmap pixmap="Spark-E2/infobar/vol_box.png" position="center,235" size="35,24" alphatest="on" zPosition="4"/>
+		<widget source="global.CurrentTime" render="MetVolume" zPosition="2" position="center,5" size="35,25" font="Replacement;14" valign="center" halign="center" backgroundColor="bsback" transparent="1"/>
+  </screen>
+<!--
+	<screen name="Volume" position="center,400" zPosition="10" size="600,44" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel backgroundColor="#30006cf6" name="volback" position="0,0" size="600,44" zPosition="-20" />
+		<eLabel backgroundColor="#301a3ab5" name="volback2" position="3,3" size="594,38" zPosition="-20" />		
+		<ePixmap pixmap="Spark-E2/window/volume.png" position="40,5" size="34,34" alphatest="blend" transparent="1"/>
+		<widget name="Volume" pixmap="Spark-E2/window/vol.png" position="120,17" zPosition="1" borderWidth="3" borderColor="#006cf6" size="350,10" transparent="1"/>
+		<widget source="global.CurrentTime" render="MetVolume" zPosition="2" position="60,4" size="500,38" font="Replacement;20" valign="center" halign="right" backgroundColor="back" transparent="1"/>
+	</screen> -->
+
+	<screen name="Mute" position="67,50" size="64,64" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+		<ePixmap pixmap="Spark-E2/window/mute.png" position="1,1" size="64,64" alphatest="on"/>
+	</screen>
+
+	<screen name="menu_mainmenu" title="Main Menu" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/shutdown.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/setup.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/plugins.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/information.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/timer.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/YPbPr.png" position="128,128" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">ChangeVideoPort</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="menu_setup" title="Setup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/shutdown.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/setup.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/plugins.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/information.png" position="544,75" size="125,125" alphatest="on">
+
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/scart.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/timer.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/setup.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">system_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/sat_search.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">service_searching_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/look.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">parental_setup</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/reset.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">factory_reset</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/setup.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">software_update</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="menu_system" title="System" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<ePixmap position="544,75" size="128,128" pixmap="Spark-E2/menu/setup.png" alphatest="on"/>
+	</screen>
+
+	<screen name="menu_harddisk" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/hdd.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">harddisk_init</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/hdd.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">harddisk_check</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/hdd.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">harddisk_setup</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="menu_shutdown" title="Shutdown/Restart" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/shutdown.png" position="544,75" size="128,125" alphatest="on">
+			<convert type="MenuEntryCompare">deep_standby</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/reboot.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">restart</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/restart.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">restart_enigma</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/shutdown.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">standby</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/timer.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">sleep</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+
+	</screen>
+
+	<screen name="menu_information" title="Information" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/info.png" position="544,75" size="125,125" alphatest="on">
+
+			<convert type="MenuEntryCompare">about_screen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="Spark-E2/menu/information.png" position="544,75" size="125,125" alphatest="on">
+			<convert type="MenuEntryCompare">service_info_screen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="menu_scan" title="Service Searching" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MenuTemplate"/>
+		<ePixmap position="544,75" size="125,125" pixmap="Spark-E2/menu/sat_search.png" alphatest="on"/>
+	</screen>
+
+	<screen name="About" title="About" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGB"/> -->
+<!--		<panel name="MidleScreen_RGYS_Template"/> -->
+		<eLabel name="Line" position="center,415" size="744,1" backgroundColor="bluespark"/>
+		<eLabel text="MeySpark is just about Me and Spark" position="0,420" size="744,34" halign="center" font="Replacement;28" foregroundColor="teks" backgroundColor="bsback" transparent="1"/>
+		<widget name="AboutScrollLabel" position="0,0" size="744,410" font="Regular;22" split="1" dividechar=":" colposition="350"/>
+<!--		<ePixmap pixmap="Spark-E2/window/metropolishd_logo.png" position="center,550" size="743,50" alphatest="off" transparent="1"/> -->
+	</screen>
+
+	<screen name="MemoryInfo" title="Memory Info" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGB"/>
+<!--		<panel name="MidleScreen_RGB_Template"/> -->
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="pused" position="0,0" size="248,25" font="Regular;20" halign="center"/>
+		<widget name="slide" position="center,2" size="248,20" foregroundColor="grey" borderWidth="1"/>
+		<widget name="pfree" position="496,0" size="248,25" font="Regular;20" halign="center"/>
+		<widget name="lmemtext" position="0,30" size="186,420" font="Regular;16"/>
+		<widget name="lmemvalue" position="186,30" size="100,420" font="Regular;16" halign="right"/>
+		<widget name="rmemtext" position="372,30" size="186,300" font="Regular;16"/>
+		<widget name="rmemvalue" position="558,30" size="100,300" font="Regular;16" halign="right"/>
+		<widget name="info" position="310,345" size="380,80" font="Regular;16" foregroundColor="grey"/>
+		<widget name="params" rowsincolumn="22"/>
+	</screen>
+
+	<screen name="CommitInfo" title="Latest Commits" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_R_Midle"/>
+<!--		<panel name="MidleScreen_R_Template"/>
+		<eLabel text="Latest Commits" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="AboutScrollLabel" position="center,0" size="744,410" halign="center" font="Regular;22"/>
+	</screen>
+
+	<screen name="TranslationInfo" title="Translation" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_R_Midle"/>
+<!--		<panel name="ButtonTemplate_R_Minimal2"/>
+		<panel name="MinimalScreen_R_Template"/>
+		<eLabel text="Translation" position="365,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="TranslatorName" render="Label" position="center,0" size="744,40" font="Regular;26" foregroundColor="yellow" halign="center"/>
+		<eLabel name="Line" position="center,45" size="744,1" backgroundColor="bluespark"/>
+		<widget source="TranslationInfo" render="Label" position="center,50" size="744,400" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="ServiceInfoSimple" title="Simple Service Info" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ServiceInfoTemplate"/>
+	</screen>
+
+	<screen name="ServiceInfo" title="Service Info" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ServiceInfoTemplate"/>
+		<panel name="ButtonTemplate_RGYB"/>
+	</screen>
+
+	<screen name="AudioSelection" position="center,center" size="680,330" backgroundColor="bsback" title="Audio">
+		<widget name="config" position="70,10" size="590,110" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="key_red" render="Pixmap" pixmap="Spark-E2/buttons/key_red.png" position="20,10" size="35,25" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="Spark-E2/buttons/key_green.png" position="20,35" size="35,25" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="Spark-E2/buttons/key_yellow.png" position="20,60" size="35,25" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="Spark-E2/buttons/key_blue.png" position="20,85" size="35,25" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap pixmap="Spark-E2/window/div-h.png" position="20,112" size="640,2"/>
+		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" position="20,120" size="640,200">
+
+			<convert type="TemplatedMultiContent">
+{"templates":
+{"default": (25, [
+MultiContentEntryText(pos = (0,0), size = (35,25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+MultiContentEntryText(pos = (50,0), size = (55,25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+MultiContentEntryText(pos = (115,0), size = (200,25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+MultiContentEntryText(pos = (325,0), size = (200,25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+MultiContentEntryText(pos = (535,0), size = (105,25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+], True, "showNever"),
+"notselected": (25, [
+MultiContentEntryText(pos = (0,0), size = (35,25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+MultiContentEntryText(pos = (50,0), size = (55,25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+MultiContentEntryText(pos = (115,0), size = (200,25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+MultiContentEntryText(pos = (325,0), size = (200,25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+MultiContentEntryText(pos = (535,0), size = (105,25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+], False, "showNever")
+},
+"fonts": [gFont("Regular",20), gFont("Regular",20)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="BouquetSelector" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreenTemplate"/>
+		<eLabel text="Select a bouquet" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="menu" position="center,114" size="700,526" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="ChannelContextMenu" position="center,center" size="600,290" backgroundColor="bsback">
+		<widget name="menu" position="20,20" size="560,250" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="ChannelSelectionRadio" position="82,100" size="1116,370">
+		<widget name="list" position="center,0" size="1070,310" scrollbarMode="showOnDemand" picServiceEventProgressbar="Spark-E2/chnsel/pl.png" sliderPixmap="Spark-E2/window/slider_vert.png" foregroundColorServiceNotAvail="#444444" colorServiceDescriptionSelected="hellgreen" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;20" colorEventProgressbarBorderSelected="#000000"/>
+		<eLabel name="Line" position="center,328" size="1100,1" backgroundColor="lineback"/>
+		<widget name="key_red" position="188,330" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="370,330" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_yellow" position="552,330" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="730,330" size="180,33" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="195,364" size="170,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="375,364" size="170,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="555,364" size="170,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="735,364" size="170,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="ChoiceBox" position="center,190" size="550,400" backgroundColor="bsback">
+		<widget name="text" position="20,10" size="510,25" font="Regular;20"/>
+		<widget name="list" position="20,40" size="510,335" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<applet type="onLayoutFinish">
+from enigma import eSize, ePoint
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+textsize = (textsize[0] + 80, textsize[1] + 40)
+count = len(self.list)
+if count > 10:
+	count = 10
+offset = 25 * count
+wsizex = textsize[0] + 80
+wsizey = textsize[1] + offset +10
+if (640 > wsizex):
+	wsizex = 640
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+self["text"].instance.resize(eSize(*textsize))
+listsize = (wsizex - 20, 25 * count)
+self["list"].instance.move(ePoint(10, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+newwidth = wsize[0]
+self.instance.move(ePoint((1280-wsizex) / 2, (720 - wsizey) / (count > 7 and 2 or 3)))
+		</applet>
+	</screen>
+
+	<screen name="Console" position="center,190" size="650,400" backgroundColor="bsback">
+<!--		<panel name="MidleScreenTemplate"/>
+		<widget source="Title" render="Label" position="0,0" size="744,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="text" position="center,0" size="650,400" font="Console;21"/>
+	</screen>
+
+	<screen name="clockDisplay" position="420,200" size="340,300" backgroundColor="back">
+		<eLabel position="0,0" size="340,2" backgroundColor="grey"/>
+		<widget name="okbutton" position="20,20" size="300,40"/>
+		<widget name="theClock" position="20,70" size="300,50"/>
+		<widget name="title" position="20,130" size="300,50"/>
+	</screen>
+
+	<screen name="EPGSelection" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/>
+		<panel name="Big2PanelsSecondPanelTemplate"/>
+<!--		<eLabel text="EPG selection" position="68,72" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/> 
+		<eLabel name="EPG" position="867,565" size="75,22" text="EPG" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>-->
+		<widget name="list" position="0,0" size="680,437" itemHeight="30" enableWrapAround="1" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="Event" render="Label" position="690,0" size="376,437" font="Regular;20" halign="left" foregroundColor="foreground">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+<!--		<eLabel name="OK" position="867,604" size="75,22" text="OK" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+		<widget source="session.CurrentService" render="Label" position="850,71" size="345,34" font="Replacement;22" halign="center" foregroundColor="yellow" valign="center" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel name="Line" position="871,511" size="300,1" backgroundColor="lineback"/>
+		<eLabel name="..." position="991,478" size="75,22" text="..." font="Regular;20" halign="center" foregroundColor="foreground" valign="center"/>
+		<eLabel name="..." position="991,109" size="75,22" text="..." font="Regular;20" halign="center" foregroundColor="foreground" valign="center"/> -->
+	</screen>
+
+	<screen name="EPGSelectionMulti" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/>
+<!--		<eLabel text="Multi-EPG bouquet selection" position="center,37" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/> -->
+		<widget name="list" position="0,45" size="680,390" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="now_button_sel" pixmap="Spark-E2/window/epg_now.png" position="8,0" zPosition="3" size="795,35" alphatest="on"/>
+		<widget name="next_button_sel" pixmap="Spark-E2/window/epg_next.png" position="8,0" zPosition="3" size="795,35" alphatest="on"/>
+		<widget name="more_button_sel" pixmap="Spark-E2/window/epg_more.png" position="8,0" zPosition="3" size="795,35" alphatest="on"/>
+		<widget name="now_text" position="0,7" zPosition="4" size="250,25" text="NOW" font="Regular;20" halign="center" backgroundColor="back" transparent="1"/>
+		<widget name="next_text" position="270,7" zPosition="4" size="250,25" text="NEXT" font="Regular;20" halign="center" backgroundColor="back" transparent="1"/>
+		<widget name="more_text" position="530,7" zPosition="4" size="250,25" text="MORE" font="Regular;20" halign="center" backgroundColor="back" transparent="1"/>
+		<widget name="date" position="813,3" size="253,28" font="Regular;24" valign="center" halign="center"/>
+		<widget source="Event" render="Label" position="690,45" size="376,390" font="Regular;20">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	</screen>
+
+	<screen name="EventView" title="Event View" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/>
+		<!--		<panel name="ThirdInfoBar"/> -->
+		<panel name="Big2PanelsSecondPanelTemplate"/>
+<!--		<eLabel text="Zpark Draft" position="center,center" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/> -->
+		<eLabel name="Exit" position="867,565" size="75,22" text="Exit" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+		<eLabel name="OK" position="867,604" size="75,22" text="OK" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+		<eLabel name="Line" position="871,511" size="300,1" backgroundColor="lineback"/>
+<!--		<widget name="channel" position="110,71" size="745,34" font="Replacement;22" halign="left" backgroundColor="titleback" foregroundColor="titlefore" transparent="1"/> -->
+		<widget name="epg_description" position="0,0" size="680,437" font="Regular;26" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="datetime" position="862,115" size="174,25" font="Replacement;22" halign="right" foregroundColor="red"/>
+		<widget name="duration" position="1062,115" size="101,25" font="Replacement;22" foregroundColor="red"/>
+	</screen>
+
+	<screen name="GraphMultiEPG" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/>
+<!--		<panel name="BigScreen_RGYB_Template"/> -->
+<!--		<widget source="Title" render="Label" position="110,36" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="timeline_text" position="center,0" size="1066,26" backgroundColor="bsback" transparent="1"/>
+		<widget name="list" position="center,35" size="1066,250" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,35" size="1140,1" backgroundColor="darkgrey"/>
+		<eLabel position="0,285" size="1140,1" backgroundColor="darkgrey"/>
+		<widget name="timeline0" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+
+		<widget name="timeline1" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline2" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline3" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline4" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline5" position="0,35" zPosition="1" size="1,250" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline_now" position="0,25" zPosition="2" size="15,261" pixmap="Spark-E2/window/timeline-now.png" alphatest="on"/>
+		<widget source="Event" render="Label" position="0,295" size="400,60" font="Regular;24" halign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="130,400" size="60,22" font="Regular;20" halign="right">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>
+		<widget source="Event" render="Label" position="194,400" size="70,22" font="Regular;20">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Progress" position="46,428" zPosition="1" pixmap="Spark-E2/window/progress.png" size="300,15" borderWidth="1" borderColor="border">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="Label" position="413,295" size="653,148" font="Regular;18">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget source="Event" render="Label" position="0,365" size="400,25" font="Regular;22" halign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:(%A - %d.%m)</convert>
+		</widget>
+	</screen>
+
+	<screen name="GraphMultiEPGList" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGYB_Template"/>
+		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="timeline_text" position="center,120" size="700,26"/>
+		<widget name="list" position="center,155" size="700,420" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="center,155" size="700,1" backgroundColor="darkgrey"/>
+		<eLabel position="center,574" size="700,1" backgroundColor="darkgrey"/>
+		<eLabel position="290,155" size="1,420" backgroundColor="darkgrey"/>
+		<eLabel position="990,155" size="1,420" backgroundColor="darkgrey"/>
+		<widget name="timeline0" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline1" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline2" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline3" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline4" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline5" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline_now" position="60,145" zPosition="2" size="15,446" pixmap="Spark-E2/window/timeline-now.png" alphatest="on"/>
+	</screen>
+
+	<screen name="GraphMultiEpgSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_CancelOK_Template"/>
+		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="config" position="center,120" size="700,490" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="HarddiskSelection" position="center,190" size="620,420" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/> -->
+		<eLabel text="Select HDD" position="0,0" size="620,34" halign="left" font="Replacement;22" foregroundColor="teks" backgroundColor="bsback" transparent="1"/>
+		<widget name="hddlist" position="center,44" size="620,290" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeight="29"/>
+	</screen>
+
+	<screen name="HarddiskWait" position="340,134" size="600,502" backgroundColor="bsback">
+		<widget name="wait" position="10,12" size="580,120" font="Regular;23"/>
+	</screen>
+
+	<screen name="HelpMenu" position="center,138" size="744,500" backgroundColor="bsback" title="Help with RC">
+<!--		<panel name="MidleScreenTemplate"/>
+		<eLabel text="help..." position="320,71" size="740,50" font="Replacement;22" halign="left" backgroundColor="titleback" transparent="1" foregroundColor="titlefore"/> -->
+		<widget name="rc" position="0,0" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="long_key" position="140,470" size="604,30" font="Regular;24" halign="center" foregroundColor="yellow"/>
+		<widget name="list" position="140,0" size="604,450" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel name="Line" position="140,460" size="604,1" backgroundColor="bluespark"/>
+		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
+	</screen>
+
+	<screen name="LanguageSelection" position="center,138" size="744,500" backgroundColor="bsback">
+<!--		<panel name="MidleScreenTemplate"/> -->
+<!--		<eLabel text="Language selection" position="312,71" size="630,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="languages" render="Listbox" position="center,0" size="744,485" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (300,10), size = (420,30), flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryPixmap(pos = (200,5), size = (60,40), png = 2),],
+				"fonts": [gFont("Regular",25)],
+				"itemHeight": 50 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="TextBox" position="center,190" size="550,400" title="Message">
+		<widget name="text" position="center,center" size="480,380" font="Regular;22"/>
+	</screen>
+
+	<screen name="MessageBoxTemplate">
+		<widget name="text" position="65,8" size="680,0" font="Regular;22"/>
+		<widget name="ErrorPixmap" pixmap="Spark-E2/icons/input_error.png" position="5,5" size="53,53" alphatest="on"/>
+		<widget name="QuestionPixmap" pixmap="Spark-E2/icons/input_question.png" position="5,5" size="53,53" alphatest="on"/>
+		<widget name="InfoPixmap" pixmap="Spark-E2/icons/input_info.png" position="5,5" size="53,53" alphatest="on"/>
+		<widget name="list" position="57,56" size="760,375"/>
+		<applet type="onLayoutFinish">
+from enigma import eSize, ePoint
+orgwidth = self.instance.size().width()
+orgheight = self.instance.size().height()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+textsize = (textsize[0] + 50, textsize[1] + 20)
+wsizex = textsize[0] + 60
+wsizey = textsize[1]
+lenlist = len(self.list) * 25
+if (lenlist > 125):
+	lenlist = 125
+if (64 > wsizey):
+	wsizey = 64
+if self.type == self.TYPE_YESNO:
+	wsizey += lenlist + 10
+if (280 > wsizex):
+	wsizex = 280
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+self["text"].instance.move(ePoint(65, 8))
+self["text"].instance.resize(eSize(*textsize))
+self["ErrorPixmap"].instance.move(ePoint(5, 5))
+self["ErrorPixmap"].instance.resize(eSize(53, 53))
+self["QuestionPixmap"].instance.move(ePoint(5, 5))
+self["QuestionPixmap"].instance.resize(eSize(53, 53))
+self["InfoPixmap"].instance.move(ePoint(5, 5))
+self["InfoPixmap"].instance.resize(eSize(53, 53))
+if self.type == self.TYPE_YESNO:
+	listsize = (wsizex - 20, lenlist)
+	self["list"].instance.move(ePoint(10, wsizey - lenlist - 5))
+	self["list"].instance.resize(eSize(*listsize))
+newwidth = wsize[0]
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) / 2, orgpos.y() + (orgheight - wsizey) / 2))
+		</applet>
+	</screen>
+
+	<screen name="MessageBox" position="center,center" size="800,10">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
+
+	<screen name="MessageBoxSimple" position="center,center" size="800,10">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
+
+	<screen name="PlayerTemplate">
+		<!--<eLabel position="center,1" size="1100,140" backgroundColor="#30006cf6" alphatest="blend" zPosition="-3"/>
+		<eLabel position="272,5" size="745,40" backgroundColor="#30000000" alphatest="blend" zPosition="-3"/>-->
+		<ePixmap pixmap="Spark-E2/infobar/MediaPlayer2.png" position="center,center" size="1100,209" alphatest="blend" zPosition="-3"/>
+		<!--<ePixmap pixmap="Spark-E2/icons/TitleBar.png" position="272,5" size="745,40" alphatest="blend" zPosition="-2"/>
+		<eLabel name="Line" position="center,613" size="716,1" backgroundColor="lineback"/>-->
+		<eLabel name="Line" position="center,center" size="754,2" backgroundColor="bluespark"/>
+		<!--<eLabel name="Line" position="center,1" size="1100,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="center,141" size="1100,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="90,1" size="1,140" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1190,1" size="1,140" backgroundColor="lineback"/>-->
+		<!--<ePixmap position="1041,35" size="96,96" pixmap="Spark-E2/icons/mplayer.png" alphatest="on"/>
+		<ePixmap position="1041,35" size="96,96" pixmap="Spark-E2/picon_default.png" alphatest="on"/>-->
+		<widget source="global.CurrentTime" render="Label" position="620,165" size="110,26" font="Replacement;20" halign="center" valign="center" foregroundColor="foreground" backgroundColor="black" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="729,165" size="111,26" font="Replacement;20" halign="center" valign="center" foregroundColor="foreground" backgroundColor="black" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="845,165" size="54,26" font="Replacement;20" halign="left" valign="center" foregroundColor="foreground" backgroundColor="black" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="center,15" size="540,30" font="Regular; 24" backgroundColor="black" transparent="1" halign="center" valign="center" noWrap="1" foregroundColor="#dddddd">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<ePixmap pixmap="Spark-E2/chnsel/ico_dolby_off.png" position="108,14" size="65,24" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Spark-E2/chnsel/ico_dolby_on.png" position="center,165" size="65,24" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap pixmap="Spark-E2/chnsel/ico_format_off.png" position="183,13" size="42,27" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Spark-E2/chnsel/ico_format_on.png" position="188,165" size="42,27" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Replacement;20" position="260,165" size="54,20" halign="right" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+			<convert type="ServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel text="x" font="Replacement;13" position="319,168" size="13,20" halign="center" backgroundColor="bsback" foregroundColor="teks" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" font="Replacement;20" position="337,165" size="54,20" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+			<convert type="ServiceInfo">VideoHeight</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" position="center,center" size="754,6" zPosition="1" pixmap="Spark-E2/window/slider_player.png" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="20,105" size="754,10" zPosition="2" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="180,73" size="150,28" halign="left" font="Regular;26" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="center,73" size="150,28" halign="center" font="Regular;23" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="764,73" size="150,28" halign="right" font="Regular;26" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<ePixmap position="center,115" zPosition="1" size="165,25" pixmap="Spark-E2/window/mp_buttons.png" alphatest="on"/>
+		<widget source="session.RecordState" render="Pixmap" pixmap="Spark-E2/infobar/ico_rec_on.png" position="400,165" zPosition="3" size="38,38" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+
+	<screen name="MoviePlayer" position="center,450" size="1100,209" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerTemplate"/>
+	</screen>
+
+	<screen name="MovieContextMenu" position="center,230" size="620,340" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Movielist menu" position="110,155" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="menu" position="center,0" size="620,340" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="MovieBrowserConfiguration" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RG_Template"/>
+<!--		<eLabel text="Movie Browser Configuration" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>-->
+		<widget name="config" position="center,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="MovieLocationBox" position="90,100" size="1100,560" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="text" position="10,10" size="1080,27" font="Regular;23"/>
+		<eLabel position="10,50" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="filelist" position="30,85" size="1060,200" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1"/>
+		<eLabel position="10,345" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="booklist" position="30,380" size="1060,125" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="LocationBox" position="90,100" size="1100,560" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="text" position="10,10" size="1080,27" font="Regular;23"/>
+		<eLabel position="10,50" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="filelist" position="30,85" size="1040,200" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="10,345" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="booklist" position="30,380" size="1040,125" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="DVDMovieSelection" position="0,0" size="1278,720" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="Select a movie" position="110,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<panel name="Big2PanelsTemplate"/>
+		<panel name="MovieSelectionSmallpanelTemplate"/>
+		<widget name="waitingtext" position="60,575" size="750,30" zPosition="3" halign="center" font="Regular;24" backgroundColor="back" shadowColor="black" shadowOffset="-3,-3"/>
+		<widget name="freeDiskSpace" position="60,575" size="750,30" zPosition="3" halign="center" font="Regular;24" backgroundColor="back" shadowColor="black" shadowOffset="-3,-3"/>
+	</screen>
+
+	<screen name="MovieSelection" position="center,140" size="1066,504" backgroundColor="bsback">
+		<panel name="MovieRGYBButton"/> 
+<!--		<panel name="Big2PanelsTemplate"/>-->
+		<panel name="MovieSelectionSmallpanelTemplate"/> -->
+<!--		<eLabel text="Select a movie" position="110,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="movie_sort" pixmaps="Spark-E2/icons/az.png,Spark-E2/icons/newtop.png,Spark-E2/icons/shuffle.png,Spark-E2/icons/za.png,Spark-E2/icons/oldtop.png,Spark-E2/icons/faz.png,Spark-E2/icons/fza.png,Spark-E2/icons/default.png" position="730,322" size="35,20" transparent="1" alphatest="off"/>
+		<widget name="movie_off" pixmaps="Spark-E2/icons/ask.png,Spark-E2/icons/movielist.png,Spark-E2/icons/quit.png,Spark-E2/icons/pause.png,Spark-E2/icons/playlist.png,Spark-E2/icons/playlistquit.png,Spark-E2/icons/loop.png,Spark-E2/icons/rep.png" position="690,322" size="35,20" transparent="1" alphatest="off"/> -->
+		<eLabel name="Line" position="0,390" size="680,1" backgroundColor="bluespark"/>
+		<widget name="waitingtext" position="0,400" size="680,36" zPosition="3" halign="center" font="Regular;28" backgroundColor="bsback" shadowColor="black" shadowOffset="-3,-3" transparent="0"/>
+		<widget name="chosenletter" position="0,400" size="680,36" zPosition="3" halign="center" font="Regular;28" shadowColor="black" shadowOffset="-3,-3"/>
+		<widget name="freeDiskSpace" position="0,400" size="680,36" halign="center" font="Regular;28" shadowColor="black" shadowOffset="-3,-3"/>
+	</screen>
+
+	<screen name="SuomipoekaMenu" position="90,100" size="1100,560" backgroundColor="back">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="config" position="10,10" size="1080,500" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="MovieSelectionSP" position="90,100" size="1100,560" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
+		<widget name="list" position="10,20" size="760,460" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
+		<widget source="Service" render="Label" position="790,30" size="300,50" font="Regular;24" halign="center">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="790,90" size="300,48" font="Regular;22" halign="center" foregroundColor="border">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="790,150" size="300,22" font="Regular;22" halign="center">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="10,485" size="760,25" font="Regular;22" halign="center">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="Service" render="Label" position="790,270" size="140,22" font="Regular;22" halign="right">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="Service" render="Label" position="940,270" size="140,22" font="Regular;22">
+			<convert type="ServiceTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M </convert>
+		</widget>
+		<widget name="FileSize" position="790,210" size="300,22" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="NimSelection" position="center,200" size="620,420" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Select a tuner" position="375,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="nimlist" render="Listbox" position="center,10" size="580,300" sliderPixmap="Spark-E2/window/slider_vert.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (10,8), size = (560,30), flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (100,32), size = (520,27), font = 1, flags = RT_HALIGN_LEFT, text = 2),],
+				"fonts": [gFont("Regular",24), gFont("Regular",21)],
+				"itemHeight": 70}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="NimSetup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYB_Template"/>
+<!--		<eLabel text="Reception settings" position="312,71" size="841,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="720,450" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="NumberZap" position="center,355" size="400,90" backgroundColor="back">;
+		<widget name="channel" position="30,5" size="130,28" font="Regular;25"/>
+		<widget name="number" position="190,5" size="80,28" font="Regular;25"/>
+		<widget name="servicename" position="30,45" size="360,28" font="Regular;25"/>
+	</screen>
+
+	<screen name="ParentalControlSetup" position="center,205" size="542,380" backgroundColor="bsback">
+		<panel name="MinimalScreen_RGS_Template"/>
+<!--		<eLabel text="Parental control setup" position="360,155" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="542,295" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="ParentalControlEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreenTemplate"/>
+		<eLabel text="Parental control services editor" position="271,68" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<widget name="servicelist" position="center,130" size="580,485" scrollbarMode="showNever"/>
+	</screen>
+
+	<screen name="ParentalControlChangePin" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreen_RGS_Template"/>
+		<eLabel text="Change pin code" position="center,155" size="600,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<widget name="config" position="center,210" size="580,295" scrollbarMode="showNever"/>
+	</screen>
+
+	<screen name="PluginBrowser" title="Plugin Browser" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RG_Midle"/>
+<!--		<panel name="MidleScreen_RG_Template"/>
+		<eLabel text="Plugin browser" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="list" position="0,0" size="744,450" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeight="50"/>
+	</screen>
+
+	<screen name="PluginDownloadBrowser" position="center,138" size="744,500" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/>
+		<widget source="Title" render="Label" position="365,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="text" position="center,0" size="744,50" zPosition="2" font="Regular;24"/>
+		<widget name="list" position="center,0" size="744,500" zPosition="3" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeight="50"/>
+	</screen>
+
+	<screen name="RadioInfoBar" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" zPosition="-15">
+		<eLabel position="82,480" size="1116,192" backgroundColor="back" zPosition="-10"/>
+		<eLabel name="Line" position="82,480" size="1116,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="82,672" size="1116,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="82,480" size="1,192" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1198,480" size="1,192" backgroundColor="lineback"/>
+		<widget source="session.CurrentService" render="Label" position="154,486" size="138,28" font="Regular;24" halign="right" foregroundColor="yellow">
+			<convert type="ServiceName">Number</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="300,486" size="550,26" font="Regular;24" foregroundColor="yellow">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="300,514" size="400,22" font="Regular;18" foregroundColor="grey">
+			<convert type="ServiceName">Provider</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="962,487" size="80,25" font="Regular;24" halign="right" foregroundColor="hellgreen">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1042,487" size="60,25" font="Regular;18" foregroundColor="hellgreen">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="Spark-E2/infobar/ico_rec_on.png" position="1102,490" size="38,38" zPosition="2" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<eLabel name="Line" position="center,540" size="1096,1" backgroundColor="lineback"/>
+		<widget source="session.Event_Now" render="Label" position="222,547" size="65,25" halign="right" font="Regular;22">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="287,547" size="20,25" halign="center" font="Regular;22"/>
+		<widget source="session.Event_Now" render="Label" position="307,547" size="65,25" font="Regular;22">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="382,547" size="560,25" font="Regular;22" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="942,547" size="120,25" halign="right" font="Regular;22">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<eLabel name="Line" position="222,582" size="840,1" backgroundColor="lineback"/>
+		<widget source="session.Event_Now" render="Progress" pixmap="Spark-E2/window/slider.png" position="222,580" size="840,6" zPosition="1" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="222,594" size="65,25" halign="right" font="Regular;22" foregroundColor="grey">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="287,594" size="20,25" halign="center" font="Regular;22" foregroundColor="grey"/>
+
+		<widget source="session.Event_Next" render="Label" position="307,594" size="65,25" font="Regular;22" foregroundColor="grey">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="382,594" size="560,25" font="Regular;22" foregroundColor="grey" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="942,594" size="120,25" halign="right" font="Regular;22" foregroundColor="grey">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget source="RdsDecoder" render="Pixmap" pixmap="Spark-E2/icons/rass_logo.png" position="1082,553" size="100,60" alphatest="on">
+			<convert type="RdsInfo">RasInteractiveAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel name="Line" position="center,625" size="1096,1" backgroundColor="lineback"/>
+		<widget source="RdsDecoder" render="Label" position="center,633" size="1100,30" font="LCD;30" halign="center" foregroundColor="yellow">
+			<convert type="RdsInfo">RadioText</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="976,515" size="110,20" font="Regular;18" halign="right" foregroundColor="grey">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+	</screen>
+
+	<screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="RassLogo" pixmap="Spark-E2/icons/rass_logo.png" position="100,585" size="50,21"/>
+		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="transpBlack"/>
+		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1" backgroundColor="transpBlack"/>
+	</screen>
+
+	<screen name="Dish" flags="wfNoBorder" position="1100,100" size="65,80" zPosition="-1" backgroundColor="transparent">
+		<widget name="Dishpixmap" pixmap="Spark-E2/icons/dish.png" position="0,0" size="65,80" alphatest="off"/>
+		<widget name="turnTime" position="0,80" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="tunerName" position="0,100" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="turnSpeed" position="0,120" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="From" position="0,140" size="50,20" font="Regular;17" shadowColor="black" shadowOffset="-2,-1"/>
+		<widget name="posFrom" position="52,140" size="70,20" font="Regular;20" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="Goto" position="0,160" size="50,20" font="Regular;17" shadowColor="black" shadowOffset="-2,-1"/>
+		<widget name="posGoto" position="52,160" size="70,20" font="Regular;20" shadowColor="black" shadowOffset="-2,-2"/>
+	</screen>
+
+<!--Satfinder -->
+	<screen name="Satfinder" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_CancelScan_Template"/>
+<!--		<eLabel text="Satfinder" position="center,72" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/> -->
+		<widget source="Frontend" render="Label" position="center,0" size="280,20" font="Regular;19" halign="center" valign="center">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel name="snr" text="SNR:" position="162,25" size="60,22" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Progress" position="center,25" size="280,20" pixmap="Spark-E2/window/bar_snr.png" borderWidth="2" borderColor="border">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="522,25" size="60,22" font="Regular;21">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel name="agc" text="AGC:" position="162,50" size="60,22" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Progress" position="center,50" size="280,20" pixmap="Spark-E2/window/bar_snr.png" borderWidth="2" borderColor="border">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="522,50" size="60,22" font="Regular;21">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel name="ber" text="BER:" position="162,75" size="60,22" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Progress" position="center,75" size="280,20" pixmap="Spark-E2/window/bar_ber.png" borderWidth="2" borderColor="border">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="522,75" size="60,22" font="Regular;21">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel name="lock" text="Lock:" position="142,100" size="80,25" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Pixmap" pixmap="Spark-E2/icons/lock_on.png" position="232,100" zPosition="1" size="38,31" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="Spark-E2/icons/lock_off.png" position="232,100" zPosition="1" size="38,31" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="config" position="center,144" size="620,275" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="introduction" position="center,429" size="700,25" font="Regular;20" halign="center"/>
+	</screen>
+
+	<screen name="ScanSetup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ScanTemplate"/>
+		<widget name="introduction" position="center,410" size="700,25" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="ScanSimple" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ScanTemplate"/>
+		<widget name="footer" position="center,410" size="700,25" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="ServiceScan" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RG_Template"/>
+<!--		<eLabel text="Service scan" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="FrontendInfo" render="Pixmap" pixmap="Spark-E2/icons/scan-s.png" position="5,0" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="Spark-E2/icons/scan-c.png" position="5,0" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="Spark-E2/icons/scan-t.png" position="5,0" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="network" position="85,10" size="300,25" font="Regular;22"/>
+		<widget name="transponder" position="85,40" size="300,25" font="Regular;22"/>
+		<widget name="scan_state" position="center,90" size="722,25" zPosition="2" font="Regular;22"/>
+		<widget name="pass" position="center,90" size="722,25" font="Regular;22"/>
+		<widget name="scan_progress" position="center,125" size="722,20" pixmap="Spark-E2/window/progress_big.png" borderWidth="1" borderColor="border"/>
+		<widget name="servicelist" position="center,160" size="722,280" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="Setup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGS_Midle"/>
+<!--		<panel name="MidleScreen_RGS_Template"/>
+		<eLabel text="Setup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<eLabel name="Line" position="center,375" size="744,1" backgroundColor="bluespark"/>
+		<widget name="config" position="center,0" size="744,370" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="description" position="center,381" size="744,80" font="Regular;22"/>
+	</screen>
+
+	<screen name="SimpleChannelSelection" position="90,100" size="1100,560" backgroundColor="back">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="list" position="10,20" size="1080,475" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="SkinSelector" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RS_Midle"/>
+<!--		<eLabel text="Select a skin" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="SkinList" position="0,0" size="424,420" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="Preview" position="447,20" size="280,210" alphatest="off"/>
+		<widget source="introduction" render="Label" position="center,430" size="744,25" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="Standby" position="0,0" size="1280,720" flags="wfNoBorder"/>
+
+	<screen name="WizardMarginsTemplate">
+		<panel position="left" size="10%,*"/>
+		<panel position="right" size="8%,*"/>
+	</screen>
+
+	<screen name="WizardPictureLangTemplate">
+		<panel position="left" size="110,*">
+			<panel position="top" size="*,50"/>
+			<ePixmap pixmap="Spark-E2/buttons/button_red.png" position="left" size="15,16" alphatest="on"/>
+			<widget name="languagetext" position="fill" font="Regular;20"/>
+		</panel>
+	</screen>
+
+	<screen name="RemoteControlTemplate">
+		<panel position="right" size="154,*">
+			<panel position="top" size="*,50"/>
+			<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="top" zPosition="10" size="154,500" alphatest="on"/>
+			<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
+			<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
+			<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
+			<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
+		</panel>
+	</screen>
+
+	<screen name="DefaultWizardTemplate">
+		<panel name="RemoteControlTemplate"/>
+		<widget name="wizard" pixmap="Spark-E2/window/wizard.png" position="200,100" size="110,174" transparent="1" alphatest="on"/>
+		<ePixmap pixmap="Spark-E2/buttons/button_red.png" position="200,323" size="15,16" alphatest="on"/>
+		<widget name="languagetext" position="240,320" size="120,30" font="Regular;20"/>
+		<widget name="text" position="380,50" size="550,270" font="Regular;23" valign="center"/>
+		<widget source="list" render="Listbox" position="380,320" size="550,250" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="StringList"/>
+		</widget>
+		<widget name="config" position="380,320" size="550,250" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" transparent="1"/>
+	</screen>
+
+	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="back">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="LanguageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="back" title="Welcome...">
+		<panel name="RemoteControlTemplate"/>
+		<widget name="wizard" pixmap="Spark-E2/window/wizard.png" position="200,100" size="110,174" transparent="1" alphatest="on"/>
+		<widget name="text" position="380,50" size="550,170" font="Regular;23" valign="center"/>
+		<widget source="languages" render="Listbox" position="380,220" size="550,400" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (250,10), size = (420,30), flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryPixmap(pos = (150,5), size = (60,40), png = 2),],
+				"fonts": [gFont("Regular",25)],
+				"itemHeight": 50 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="DreamPackageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="back">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="SubservicesQuickzap" position="380,600" size="560,100" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel text="Subservices" position="0,0" size="560,28" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack"/>
+		<widget source="session.RecordState" render="Pixmap" pixmap="Spark-E2/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget name="CurrentSubserviceNumber" position="0,28" size="70,48" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" position="70,28" size="490,48" font="Regular;22" valign="center" backgroundColor="transpBlack">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="Subtitles" position="300,150" size="680,435" backgroundColor="back">
+		<widget name="config" position="20,20" size="640,385" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
+	<screen name="TimerEdit" position="90,100" size="1100,560" backgroundColor="back">
+		<widget name="description" position="10,10" size="1080,40" font="Regular;25"/>
+		<widget name="lbegin" position="605,102" size="103,30" font="Regular;25" foregroundColor="red"/>
+		<widget name="lend" position="605,158" size="103,30" font="Regular;25" foregroundColor="green"/>
+		<widget name="begin" position="708,105" size="72,35" font="Regular;25"/>
+		<widget name="end" position="708,150" size="72,35" font="Regular;25"/>
+		<widget name="apply" position="210,240" size="250,35"/>
+	</screen>
+
+	<screen name="TimerEditList" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYB_Template"/>
+<!--		<eLabel text="Timer editor" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="timerlist" position="center,130" size="611,463" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="TimerEntry" position="center,138" size="744,500" backgroundColor="bsback">
+<!--		<panel name="MidleScreen_RGYB_Template"/> -->
+		<panel name="ButtonTemplate_Midle_RGYB"/>
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,450" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" font="Regular;20" foregroundColor="foreground"/>
+		<widget name="canceltext" position="40,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget name="oktext" position="226,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget name="key_yellow" position="412,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+		<widget name="key_blue" position="598,470" size="150,33" font="Regular;22" halign="left" valign="center" transparent="1"/>
+	</screen>
+
+	<screen name="TimerLog" position="90,100" size="1100,560" backgroundColor="back">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="loglist" position="10,10" size="1080,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,370" size="1100,2" backgroundColor="grey"/>
+		<widget name="logentry" position="10,380" size="1080,130" font="Regular;20"/>
+	</screen>
+
+	<screen name="TimerSanityConflict" position="90,100" size="1100,560">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="list" position="10,10" size="530,80" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,325" size="1100,2" backgroundColor="grey"/>
+		<eLabel position="549,0" size="2,325" backgroundColor="grey"/>
+		<widget name="timer1" position="10,100" size="530,225" scrollbarMode="showNever"/>
+		<widget name="timer2" position="560,100" size="530,225" scrollbarMode="showNever"/>
+	</screen>
+
+	<screen name="TimerSelection" position="90,100" size="1100,560">
+		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+	</screen>
+
+	<screen name="VideoFinetune" position="0,0" size="1280,720" backgroundColor="transpBlack">
+		<widget source="Canvas" render="Canvas" position="0,0" size="1280,720"/>
+	</screen>
+
+	<screen name="OverscanTestScreen" position="0,0" size="1280,720" backgroundColor="transpBlack">
+		<ePixmap pixmap="skin_default/overscan.png" position="0,0" size="1280,720" zPosition="1" alphatest="off"/>
+	</screen>
+
+	<screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Menu" position="370,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget source="menu" render="Listbox" position="center,210" size="580,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="StringList"/>
+		</widget>
+	</screen>
+
+	<screen name="CutListEditor" position="center,680" size="700,24" flags="wfNoBorder" backgroundColor="transparent">
+		<!--eLabel text="Cutlist editor..." position="center,72" size="735,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel position="center,center" size="1229,592" zPosition="-3" backgroundColor="back"/>
+		<ePixmap pixmap="Spark-E2/window/back.png" position="center,68" size="1220,40" alphatest="off" zPosition="-2"/>
+		<eLabel position="80,125" size="310,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel position="81,126" size="308,418" zPosition="2" backgroundColor="black"/>
+		<widget source="cutlist" render="Listbox" position="90,135" size="290,400" zPosition="3" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(size=(145,20), text = 1, backcolor = MultiContentTemplateColor(3)),
+MultiContentEntryText(pos=(145,0), size=(145,20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+],
+"fonts": [gFont("Regular",18)],
+"itemHeight": 20
+}
+			</convert>
+		</widget>
+		<eLabel position="479,124" zPosition="3" size="696,367" backgroundColor="transparent"/>
+		<widget name="Video" position="479,124" zPosition="-10" size="696,367"/>
+		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="back">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" zPosition="3" font="Regular;20" halign="center" valign="center" backgroundColor="back">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<ePixmap pixmap="Spark-E2/window/mp_buttons.png" position="100,582" size="260,32" zPosition="1" alphatest="on" /-->
+		<widget name="Timeline" position="2,2" size="696,20" zPosition="3" backgroundColor="darkgrey" pointer="Spark-E2/window/position_arrow.png:3,5" foregroundColor="black"/>
+		<!--eLabel text="OK = Menu" position="1059,615" size="140,22" zPosition="1" font="Regular;20" backgroundColor="back" /-->
+	</screen>
+
+	<screen name="MediaPlayer" position="0,0" size="1280,720" backgroundColor="transparent">
+		<panel name="BigScreenTemplate"/>
+		<eLabel text="Media player" position="100,37" size="735,34" zPosition="2" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<eLabel name="Line" position="70,82" size="560,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="70,470" size="560,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="70,82" size="1,388" backgroundColor="lineback"/>
+		<eLabel name="Line" position="630,82" size="1,388" backgroundColor="lineback"/>
+		<eLabel text="Filelist" position="75,85" size="550,32" zPosition="5" font="Regular;28" halign="center" foregroundColor="titleback"/>
+		<widget name="filelist" position="80,120" size="540,345" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel name="Line" position="650,82" size="560,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="650,470" size="560,1" backgroundColor="lineback"/>
+		<eLabel name="Line" position="650,82" size="1,388" backgroundColor="lineback"/>
+		<eLabel name="Line" position="1210,82" size="1,388" backgroundColor="lineback"/>
+		<eLabel text="Playlist" position="655,85" size="550,32" zPosition="5" font="Regular;28" halign="center" foregroundColor="titleback"/>
+		<widget name="playlist" position="660,120" size="540,345" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1"/>
+		<widget name="title" position="300,480" size="680,30" font="Regular;26" foregroundColor="yellow" halign="center"/>
+		<eLabel name="Line" position="290,515" size="700,1" backgroundColor="lineback"/>
+		<widget name="artisttext" position="300,525" size="100,25" font="Regular;20" halign="right"/>
+		<widget name="artist" position="410,525" size="580,25" font="Regular;22" foregroundColor="yellow"/>
+		<widget name="albumtext" position="300,555" size="100,25" font="Regular;22" halign="right"/>
+		<widget name="album" position="410,555" size="580,25" font="Regular;22" foregroundColor="yellow"/>
+		<widget name="yeartext" position="300,585" size="100,25" font="Regular;22" halign="right"/>
+		<widget name="year" position="410,585" size="200,25" font="Regular;22" foregroundColor="yellow"/>
+		<widget name="coverArt" pixmap="Spark-E2/icons/multimedia.png" position="130,490" size="128,128" transparent="1" alphatest="on"/>
+		<widget name="repeat" position="1140,580" size="50,30" pixmaps="Spark-E2/icons/repeat_off.png,Spark-E2/icons/repeat_on.png" transparent="1" alphatest="on"/>
+		<ePixmap position="center,621" size="600,22" pixmap="Spark-E2/window/mpslider.png" zPosition="3" alphatest="off"/>
+		<widget name="PositionGauge" position="365,625" size="552,14" zPosition="4" pointer="Spark-E2/window/pointer.png:13,3"/>
+		<widget source="session.CurrentService" render="Label" position="215,621" size="110,28" font="Regular;24" halign="right" valign="center">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="620,595" size="200,30" font="Regular;24" zPosition="3">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="955,621" size="110,28" font="Regular;24" valign="center">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<ePixmap position="1040,618" zPosition="1" size="260,32" pixmap="Spark-E2/window/mp_buttons.png" alphatest="on"/>
+		<eLabel name="nowPlaying" position="0,0" size="0,0"/>
+		<widget name="genretext" position="0,0" size="0,0"/>
+		<widget name="genre" position="0,0" size="0,0"/>
+		<widget name="currenttext" position="0,0" size="0,0"/>
+		<widget name="titletext" position="0,0" size="0,0"/>
+		<eLabel name="Button" position="1120,489" size="83,33" zPosition="1" backgroundColor="selection"/>
+		<eLabel name="Menu" position="1124,495" size="75,22" text="Menu" font="Replacement;20" halign="center" zPosition="2" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+
+	</screen>
+
+	<screen name="MediaPlayerSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGS_Template"/>
+		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="config" position="center,115" size="722,480" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="CDInfo" position="90,100" size="1100,560">
+		<widget source="info" render="Label" position="20,20" size="260,200" font="Regular;21"/>
+		<widget source="info2" render="Label" position="20,240" size="260,260" font="Regular;21"/>
+		<eLabel position="300,0" size="2,518" backgroundColor="grey"/>
+		<widget name="config" position="320,20" size="760,475" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="key_red" position="179,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="357,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="714,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="179,555" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="357,555" size="178,1" foregroundColor="green" backgroundColor="green"/>
+
+		<eLabel name="Blue" position="714,555" size="178,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+	<screen name="WebIfConfigScreen" position="90,100" size="1100,560">
+		<widget name="config" position="10,20" size="1080,475" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="key_red" position="379,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="557,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="379,555" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="557,555" size="178,1" foregroundColor="green" backgroundColor="green"/>
+	</screen>
+
+	<screen name="ProjectSettings" position="90,100" size="1100,560">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="config" position="10,10" size="1080,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" enableWrapAround="1"/>
+		<widget source="info" render="Label" position="10,380" size="1080,100" font="Regular;20"/>
+	</screen>
+
+	<screen name="DVDToolbox" position="90,100" size="1100,560">
+		<widget source="info" render="Label" position="20,60" size="1060,100" font="Regular;22"/>
+		<widget name="details" position="20,200" size="1060,200" font="Regular;20"/>
+		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey"/>
+		<widget source="space_label" render="Label" position="20,484" size="1060,22" font="Regular;18" halign="center" foregroundColor="black"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="key_red" position="179,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="357,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_yellow" position="536,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="179,555" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="357,555" size="178,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="535,555" size="178,1" foregroundColor="yellow" backgroundColor="yellow"/>
+	</screen>
+
+	<screen name="TitleCutter" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="BigScreenTemplate"/>
+		<eLabel text="Cutlist editor..." position="center,37" size="735,34" zPosition="2" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<eLabel position="80,125" size="300,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel position="81,126" size="298,418" zPosition="2" backgroundColor="black"/>
+		<widget source="cutlist" position="90,135" zPosition="3" size="280,400" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" render="Listbox">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(10,2), size=(170,20), text = 1, backcolor = MultiContentTemplateColor(3)),
+MultiContentEntryText(pos=(190,2), size=(80,20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
+],
+"fonts": [gFont("Regular",20)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+		<eLabel position="479,124" zPosition="3" size="696,367" backgroundColor="transparent"/>
+		<widget name="Video" position="479,124" zPosition="-10" size="696,367"/>
+		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<ePixmap pixmap="Spark-E2/window/mp_buttons.png" position="100,582" size="260,32" alphatest="on"/>
+		<widget name="Timeline" position="479,587" size="696,20" zPosition="3" backgroundColor="darkgrey" pointer="Spark-E2/window/position_arrow.png:3,5" foregroundColor="black"/>
+		<eLabel text="OK = Menu" position="1060,630" size="140,22" font="Regular;20" backgroundColor="black" transparent="1"/>
+	</screen>
+
+	<screen name="TitleProperties" position="90,100" size="1100,560">
+		<widget name="thumbnail" position="20,20" size="260,160" alphatest="off"/>
+		<widget source="serviceinfo" render="Label" position="320,20" size="740,160" font="Regular;21"/>
+		<eLabel position="0,200" size="1100,2" backgroundColor="grey"/>
+		<widget name="config" position="20,210" size="1060,300" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="key_red" position="179,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="357,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_blue" position="714,520" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="179,555" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="357,555" size="178,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Blue" position="714,555" size="178,1" foregroundColor="blue" backgroundColor="blue"/>
+	</screen>
+
+	<screen name="FileBrowser" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreen_RGS_Template"/>
+		<widget source="Title" render="Label" position="center,155" size="600,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<widget name="filelist" position="center,210" size="580,295" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="DVDPlayer" position="0,549" size="1280,155" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerTemplate"/>
+		<ePixmap pixmap="Spark-E2/chnsel/ico_txt_off.png" position="230,13" size="42,27" zPosition="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Spark-E2/chnsel/ico_txt_on.png" position="230,13" size="42,27" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap position="148,59" size="70,35" pixmap="Spark-E2/icons/dvd.png" transparent="1" alphatest="blend"/>
+	</screen>
+
+	<screen name="ChapterZap" position="500,600" size="280,60">
+		<widget name="chapter" position="35,15" size="110,25" font="Regular;23"/>
+		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23"/>
+	</screen>
+	<screen name="TitleList" position="center,center" size="560,470">
+		<eLabel name="new eLabel" position="10,396" size="75,22" text="MENU" font="Replacement;20" halign="center" foregroundColor="foreground" backgroundColor="textback" valign="center"/>
+		<widget source="key_red" render="Label" position="0,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="137,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="273,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="408,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="10,36" size="120,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="150,36" size="120,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="290,36" size="120,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="430,36" size="120,1" foregroundColor="blue" backgroundColor="blue"/>
+		<widget source="title_label" render="Label" position="10,48" size="540,38" font="Regular;18"/>
+		<widget source="error_label" render="Label" position="10,48" size="540,296" zPosition="3" font="Regular;20"/>
+		<widget source="titles" render="Listbox" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" position="10,86" size="546,296">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (0,0), size = (360,20), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
+MultiContentEntryText(pos = (0,20), size = (360,17), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
+MultiContentEntryText(pos = (366,6), size = (152,20), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 channel,
+MultiContentEntryText(pos = (366,20), size = (102,17), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 begin time,
+MultiContentEntryText(pos = (470,20), size = (48,20), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 5 duration,
+],
+"fonts": [gFont("Regular",20), gFont("Regular",14)],
+"itemHeight": 37
+}
+			</convert>
+		</widget>
+		<widget source="hint" render="Label" position="85,396" size="505,22" font="Regular;18"/>
+		<widget name="medium_label" position="10,420" size="540,22" font="Regular;18" foregroundColors="#FFFFFF,#FFFF00,#FF0000"/>
+		<widget source="space_bar_single" render="Progress" position="10,446" size="270,24" borderWidth="1" zPosition="2" backgroundColor="progressback"/>
+		<widget source="space_label_single" render="Label" position="10,449" size="270,22" zPosition="3" font="Regular;18" halign="center" foregroundColor="black"/>
+		<widget source="space_bar_dual" render="Progress" position="10,446" size="540,24" borderWidth="1" backgroundColor="progressback"/>
+		<widget source="space_label_dual" render="Label" position="10,449" size="540,22" zPosition="2" font="Regular;18" halign="center" foregroundColor="black"/>
+
+	</screen>
+
+	<screen name="picshow" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGYS_Template"/>
+		<eLabel text="Picture player" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="thn" position="290,150" size="260,300" alphatest="on"/>
+		<widget name="filelist" position="570,center" size="420,465" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="Pic_Exif" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RS_Template"/>
+		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget source="menu" render="Listbox" position="center,center" size="705,425" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+{"template": [ MultiContentEntryText(pos = (5,7), size = (350,30), flags = RT_HALIGN_LEFT, text = 0),
+MultiContentEntryText(pos = (360,7), size = (215,30), flags = RT_HALIGN_LEFT, text = 1)],
+"fonts": [gFont("Regular",20)],
+"itemHeight": 35 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="Pic_Setup" position="340,134" size="600,502">
+		<panel name="ButtonTemplate_RG_Small"/>
+		<widget name="config" position="20,10" size="560,450" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="VlcMediaListScreen" position="90,100" size="1100,560">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="filelist_button_sel" pixmap="Spark-E2/window/epg_now.png" position="0,0" zPosition="3" size="1100,35" alphatest="off"/>
+		<widget name="playlist_button_sel" pixmap="Spark-E2/window/epg_next.png" position="0,0" zPosition="3" size="1100,35" alphatest="off"/>
+		<widget name="filelist_text" position="32,7" zPosition="4" size="250,25" font="Regular;20" halign="center"/>
+		<widget name="playlist_text" position="282,7" zPosition="4" size="250,25" font="Regular;20" halign="center"/>
+		<widget name="filelist" position="10,45" size="530,460" zPosition="3" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="550,45" size="1,460" backgroundColor="grey"/>
+		<widget name="playlist" position="560,45" size="530,460" zPosition="3" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="VlcServerListScreen" position="90,100" size="1100,560">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="serverlabel" position="10,10" size="1080,25" font="Regular;22"/>
+		<eLabel position="10,43" size="1080,2" backgroundColor="grey"/>
+
+		<widget name="serverlist" position="10,50" size="1080,437" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="VlcServerConfigScreen" position="90,100" size="1100,560">
+		<panel name="ButtonTemplate_RGYB_Big"/>
+		<widget name="config" position="10,10" size="1080,500" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="InputBox" position="365,250" size="550,90">
+		<widget name="text" position="10,20" size="550,25" font="Regular;23"/>
+		<widget name="input" position="10,55" size="550,25" font="Regular;20"/>
+	</screen>
+
+	<screen name="UpdatePluginMenu" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RS_Template"/>
+<!--		<eLabel text="Software management" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="menu" render="Listbox" position="center,0" size="744,320" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (70,9), size = (744,30), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+],
+"fonts": [gFont("Regular",22)],
+"itemHeight": 45
+}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="center,330" size="744,138" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (0,0), size = (744,138), flags = RT_HALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+],
+"fonts": [gFont("Regular",22)],
+"itemHeight": 138
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="PacketManager" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGS_Template"/>
+<!--		<eLabel text="Packet manager" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="list" render="Listbox" position="center,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (5,1), size = (610,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+				MultiContentEntryText(pos = (5,26), size = (610,24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+				MultiContentEntryPixmapAlphaTest(pos = (620,0), size = (48,48), png = 4), # index 4 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos = (0,48), size = (700,2), png = 5), # index 4 is the div pixmap
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="Ipkg" position="center,205" size="542,380" backgroundColor="bsback">
+		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Installing Software..." position="365,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="activityslider" position="center,210" size="560,10" foregroundColor="grey" borderWidth="1"/>
+		<widget name="package" position="center,240" size="540,20" font="Regular;18" halign="center" valign="center"/>
+		<widget name="status" position="center,270" size="540,45" font="Regular;20" halign="center" valign="center"/>
+		<widget name="slider" position="center,350" size="560,20" foregroundColor="grey" borderWidth="1"/>
+	</screen>
+
+	<screen name="IpkgInstaller" position="center,400" size="600,502">
+		<panel name="ButtonTemplate_RGBS_Small"/>
+		<widget name="list" position="10,9" size="580,400" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="introduction" render="Label" position="10,420" size="580,26" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="IPKGSource" position="center,400" size="1160,100">
+		<widget source="key_red" render="Label" position="388,54" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="607,54" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="388,89" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="607,89" size="178,1" foregroundColor="green" backgroundColor="green"/>
+		<widget name="text" position="5,10" size="1150,25" font="Regular;22"/>
+	</screen>
+
+	<screen name="IPKGMenu" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGS_Template"/>
+<!--		<eLabel text="Select upgrade source to edit." position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="filelist" position="center,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="RestoreMenu" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<eLabel text="Restore backups" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="filelist" position="center,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="BackupSelection" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<eLabel text="Select files/folders to backup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="checkList" position="center,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="BackupScreen" position="340,125" size="600,502">
+		<widget name="config" position="10,10" size="580,425" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+	<screen name="RestoreScreen" position="340,125" size="600,502">
+		<widget name="config" position="10,10" size="580,425" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="PluginManager" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYBS_Template"/>
+<!--		<eLabel text="Extensions management" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="list" render="Listbox" position="center,0" size="744,390" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+				{"templates":
+				{"default": (50,[
+				MultiContentEntryText(pos = (5,1), size = (610,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+				MultiContentEntryText(pos = (5,26), size = (610,24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+				MultiContentEntryPixmapAlphaTest(pos = (620,0), size = (48,48), png = 5), # index 5 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos = (0,48), size = (700,2), png = 6), # index 6 is the div pixmap
+				]),
+				"category": (50,[
+				MultiContentEntryText(pos = (5,1), size = (695,22), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+				MultiContentEntryText(pos = (5,26), size = (695,16), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
+				MultiContentEntryPixmapAlphaTest(pos = (0,48), size = (700,2), png = 3), # index 3 is the div pixmap
+				])
+				},
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="center,400" size="744,30" halign="center" valign="center" font="Regular;22"/>
+	</screen>
+
+	<screen name="PluginManagerInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGS_Template"/>
+		<eLabel text="Plugin manager activity information" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget source="list" render="Listbox" position="center,149" size="648,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+				{"templates": [
+				MultiContentEntryText(pos = (5,1), size = (610,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+				MultiContentEntryText(pos = (5,26), size = (610,24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
+				MultiContentEntryPixmapAlphaTest(pos = (620,0), size = (48,48), png = 2), # index 2 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos = (0,48), size = (700,2), png = 3), # index 3 is the div pixmap
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="center,520" size="700,30" halign="center" valign="center" font="Regular;22"/>
+	</screen>
+
+	<screen name="UpdatePlugin" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Software update" position="370,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="activityslider" position="center,210" size="550,10" foregroundColor="grey" borderWidth="1"/>
+		<widget source="package" render="Label" position="center,240" size="540,20" font="Regular;18" halign="center" valign="center"/>
+		<widget source="status" render="Label" position="center,270" size="540,45" font="Regular;20" halign="center" valign="center"/>
+		<widget name="slider" position="center,350" size="560,30" foregroundColor="grey" borderWidth="1"/>
+	</screen>
+
+	<screen name="VirtualKeyBoard" position="center,205" size="542,380" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/> -->
+		<panel name="ButtonTemplate_Minimal_RGY"/>
+<!--		<eLabel text="Virtual keyboard" position="370,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="header" position="center,0" size="542,20" font="Regular;20" noWrap="1"/>
+		<ePixmap pixmap="Spark-E2/window/vkey_text.png" position="center,29" zPosition="-4" size="542,52" alphatest="on"/>		
+		<widget name="text" position="center,31" size="530,46" font="Regular;38" noWrap="1" halign="right"/>		
+		<widget name="list" position="center,88" size="540,225" selectionDisabled="1" transparent="1"/>
+		<eLabel text="Exit" render="Label" position="59,350" size="180,33" font="Regular;22" halign="left" valign="center"/>
+		<eLabel text="OK" render="Label" position="239,350" size="180,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="country" render="Label" position="419,350" size="180,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="MyTubePlayer" position="0,549" size="1280,155" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PlayerTemplate"/>
+		<ePixmap position="148,59" size="72,30" pixmap="Spark-E2/icons/you_tube.png" transparent="1" alphatest="blend"/>
+	</screen>
+
+	<screen name="MyTubePlayerMainScreen" position="90,90" size="1100,570">
+		<widget name="config" position="7,17" size="470,50" scrollbarMode="showNever"/>
+		<widget source="global.CurrentTime" render="Label" position="870,10" size="120,30" font="Regular;26" halign="center">
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="feedlist" render="Listbox" position="500,55" size="600,462" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"templates":
+{"default": (67,[
+MultiContentEntryPixmapAlphaTest(pos = (0,0), size = (100,75), png = 4), # index 4 is the thumbnail
+MultiContentEntryText(pos = (100,1), size = (500,22), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+MultiContentEntryText(pos = (100,24), size = (300,18), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+MultiContentEntryText(pos = (100,43), size = (300,18), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+MultiContentEntryText(pos = (400,24), size = (200,18), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+MultiContentEntryText(pos = (400,43), size = (200,18), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+]),
+"state": (67,[
+MultiContentEntryText(pos = (10,1), size = (560,28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+MultiContentEntryText(pos = (10,22), size = (560,46), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+])
+},
+"fonts": [gFont("Regular",22),gFont("Regular",18),gFont("Regular",22),gFont("Regular",20)],
+"itemHeight": 67
+}
+			</convert>
+		</widget>
+		<eLabel position="2,52" size="1098,2" backgroundColor="grey" zPosition="10"/>
+		<eLabel position="490,52" size="2,467" backgroundColor="grey" zPosition="10"/>
+		<eLabel position="2,519" size="1098,2" backgroundColor="grey" zPosition="10"/>
+		<ePixmap position="995,5" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="off" transparent="1"/>
+		<widget name="key_red" position="179,525" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="357,525" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_yellow" position="536,525" size="178,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="179,560" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="357,560" size="178,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="535,560" size="178,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="714,560" size="178,1" foregroundColor="blue" backgroundColor="blue"/>
+		<eLabel text="Virtual keyboard" position="715,525" size="220,35" font="Regular;24" valign="center"/>
+		<eLabel text="INFO" position="620,10" size="70,30" font="Regular;24"/>
+		<eLabel text="MENU" position="720,10" size="90,30" font="Regular;24"/>
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="off"/># fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+		<widget name="HelpWindow" position="90,410" size="1,1" transparent="1" alphatest="off"/>
+		<eLabel name="new eLabel" position="0,0" size="10,10"/>
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeSuggestionsListScreen" position="90,150" zPosition="6" size="480,260" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="460,160" alphatest="off" transparent="1" backgroundColor="transparent"/>
+		<widget source="suggestionslist" render="Listbox" position="10,5" size="480,250" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (0,1), size = (300,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+MultiContentEntryText(pos = (310,1), size = (160,24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+],
+"fonts": [gFont("Regular",22),gFont("Regular",18)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeVideoHelpScreen" position="300,90" size="680,570" title="MyTubePlayerHelpScreen...">
+		<widget name="detailtext" position="10,10" size="660,500" font="Regular;22"/>
+		<eLabel position="0,518" size="680,2" backgroundColor="grey"/>
+		<widget name="key_red" position="246,526" size="220,35" font="Regular;24" halign="center" valign="center"/>
+		<eLabel name="Red" position="246,560" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<ePixmap position="570,525" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="off" transparent="1"/>
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeVideoInfoScreen" position="90,90" size="1100,570" title="MyTubePlayerMainScreen...">
+		<widget name="title" position="10,15" size="1080,30" zPosition="5" valign="center" font="Regular;26" noWrap="1"/>
+		<widget name="author" position="20,70" size="300,25" zPosition="10" font="Regular;22"/>
+		<widget name="duration" position="20,110" size="300,25" zPosition="10" font="Regular;22"/>
+		<widget name="published" position="20,140" size="300,25" zPosition="10" font="Regular;22"/>
+		<widget name="views" position="20,170" size="300,25" zPosition="10" font="Regular;22"/>
+		<widget name="tags" position="20,200" size="300,75" zPosition="10" font="Regular;22"/>
+		<widget name="starsbg" position="90,280" size="100,20" pixmap="Spark-E2/window/starsbar_empty.png" zPosition="5" transparent="1" alphatest="on"/>
+		<widget name="stars" position="90,280" size="100,20" pixmap="Spark-E2/window/starsbar_filled.png" zPosition="6" transparent="1"/>
+		<widget source="infolist" render="Listbox" position="350,60" size="740,135" zPosition="6" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+{"templates":
+{"default": (135,[
+MultiContentEntryPixmapAlphaTest(pos = (10,0), size = (180,135), png = 0), # index 0 is the thumbnail
+MultiContentEntryPixmapAlphaTest(pos = (190,0), size = (180,135), png = 1), # index 0 is the thumbnail
+MultiContentEntryPixmapAlphaTest(pos = (370,0), size = (180,135), png = 2), # index 0 is the thumbnail
+MultiContentEntryPixmapAlphaTest(pos = (550,0), size = (180,135), png = 3), # index 0 is the thumbnail
+]),
+"state": (135,[
+MultiContentEntryText(pos = (0,35), size = (740,65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+])
+},
+"fonts": [gFont("Regular",20),gFont("Regular",14),gFont("Regular",28)],
+"itemHeight": 135
+}
+			</convert>
+		</widget>
+		<widget name="detailtext" position="350,225" size="730,280" zPosition="10" font="Regular;22"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="key_red" position="455,526" size="178,35" font="Regular;24" halign="center" valign="center"/>
+		<eLabel name="Red" position="455,560" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<ePixmap position="980,525" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="off" transparent="1"/>
+		<widget name="thumbnail" position="0,0" size="180,135" alphatest="off"/># fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+	</screen>
+	<screen name="MyTubeHistoryScreen" position="90,157" zPosition="6" size="480,365" flags="wfNoBorder">
+		<widget source="historylist" render="Listbox" position="10,5" size="460,355" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (0,1), size = (340,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+],
+"fonts": [gFont("Regular",22),gFont("Regular",18)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="MyTubeSettingsScreen" position="340,104" size="600,532" title="MyTubeSettingsScreen">
+		<panel name="ButtonTemplate_RG_Small"/>
+		<widget name="config" position="20,10" size="560,450" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<ePixmap position="20,410" size="100,40" pixmap="~/plugin.png" alphatest="off" transparent="1"/>
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>
+
+	<screen name="MyTubeTasksScreen" position="300,90" size="680,570" title="MyTubeTasksScreen">
+		<widget name="title" position="80,60" size="800,32" font="Regular;27" halign="center"/>
+		<widget source="tasklist" render="Listbox" position="10,10" size="660,410" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (10,3), size = (200,24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+MultiContentEntryText(pos = (250,3), size = (180,24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+MultiContentEntryProgress(pos = (440,3), size = (100,24), percent = -3), # index 3 should be progress
+MultiContentEntryText(pos = (550,3), size = (70,24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+],
+"fonts": [gFont("Regular",22),gFont("Regular",18)],
+"itemHeight": 30
+}
+			</convert>
+		</widget>
+		<eLabel position="0,518" size="680,2" backgroundColor="grey"/>
+		<widget name="key_red" position="246,526" size="220,35" font="Regular;24" halign="center" valign="center"/>
+		<eLabel name="Red" position="246,560" size="178,1" foregroundColor="red" backgroundColor="red"/>
+		<ePixmap position="570,525" size="100,40" pixmap="~/plugin.png" alphatest="off" transparent="1"/>
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>
+
+	<screen name="PositionerSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGYB_Template"/>
+		<eLabel text="Positioner setup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="list" position="299,132" size="683,183" sliderPixmap="Spark-E2/window/slider_vert.png" transparent="1"/>
+		<widget name="snr_db" position="350,320" size="200,24" halign="center" valign="center" font="Regular;22"/>
+		<eLabel text="SNR:" position="297,350" size="80,24" font="Regular;22"/>
+		<widget name="snr_bar" position="390,center" size="200,20" borderWidth="1" transparent="1"/>
+		<widget name="snr_percentage" position="center,350" size="80,24" font="Regular;22"/>
+		<eLabel text="BER:" position="297,380" size="80,24" font="Regular;22"/>
+		<widget name="ber_bar" position="390,380" size="200,20" borderWidth="1" transparent="1"/>
+		<widget name="ber_value" position="center,380" size="80,24" font="Regular;22"/>
+		<eLabel text="Lock:" position="297,410" size="80,24" font="Regular;22"/>
+		<widget name="lock_state" position="390,410" size="200,24" font="Regular;22"/>
+		<eLabel text="Frequency:" position="297,440" size="150,24" font="Regular;22"/>
+		<widget name="frequency_value" position="460,440" size="150,24" font="Regular;22"/>
+		<eLabel text="Symbolrate:" position="297,470" size="150,24" font="Regular;22"/>
+		<widget name="symbolrate_value" position="460,470" size="150,24" font="Regular;22"/>
+		<eLabel text="FEC:" position="297,500" size="150,24" font="Regular;22"/>
+		<widget name="fec_value" position="460,500" size="150,24" font="Regular;22"/>
+	</screen>
+
+	<screen name="AdapterSetup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RBS_Template"/>
+<!--		<eLabel text="Network setup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="Adaptertext" render="Label" position="0,10" size="372,25" font="Regular;22"/>
+		<widget source="Adapter" render="Label" position="372,10" size="372,25" font="Regular;22" halign="right"/>
+		<widget name="config" position="center,39" size="744,150" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="introduction2" render="Label" position="center,430" size="520,30" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="0,220" size="300,25" font="Regular;22"/>
+		<widget source="IPtext" render="Label" position="0,250" size="372,22" font="Regular;20"/>
+		<widget source="IP" render="Label" position="372,250" size="372,22" font="Regular;20" halign="right"/>
+		<widget source="Netmasktext" render="Label" position="0,280" size="372,22" font="Regular;20"/>
+		<widget source="Mask" render="Label" position="372,280" size="372,22" font="Regular;20" halign="right"/>
+		<widget source="Gatewaytext" render="Label" position="0,310" size="372,22" font="Regular;20"/>
+		<widget source="Gateway" render="Label" position="372,310" size="372,22" font="Regular;20" halign="right"/>
+		<widget source="DNS1text" render="Label" position="0,340" size="372,22" font="Regular;20"/>
+		<widget source="DNS1" render="Label" position="372,340" size="372,22" font="Regular;20" halign="right"/>
+		<widget source="DNS2text" render="Label" position="0,370" size="372,22" font="Regular;20"/>
+		<widget source="DNS2" render="Label" position="372,370" size="372,22" font="Regular;20" halign="right"/>
+		<widget name="HelpWindow" position="0,400" zPosition="2" size="1,1" transparent="1" alphatest="off"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="Spark-E2/buttons/key_text.png" position="400,401" zPosition="1" size="35,25" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="AdapterSetupConfiguration" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RS_Template"/>
+<!--		<eLabel text="Network configuration..." position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="IFtext" render="Label" position="0,0" size="140,25" font="Regular;22"/>
+		<widget source="IF" render="Label" position="140,0" size="473,25" font="Regular;22"/>
+		<widget name="menulist" position="0,50" size="744,200" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="statuspic" position="0,350" size="15,16" pixmaps="Spark-E2/buttons/button_green.png,Spark-E2/buttons/button_green_off.png" transparent="1" alphatest="on"/>
+		<widget source="Statustext" render="Label" position="30,345" size="100,30" font="Regular;24"/>
+		<widget source="description" render="Label" position="center,380" size="725,80" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="NameserverSetup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<eLabel text="Nameserver setup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,20" size="744,375" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="introduction" render="Label" position="center,400" size="520,30" font="Regular;24" halign="center"/>
+	</screen>
+
+	<screen name="NetworkAdapterSelection" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<eLabel text="Select a network adapter" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="list" render="Listbox" position="center,0" size="744,280" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent"><!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->
+{"template": [
+MultiContentEntryText(pos = (85,6), size = (410,28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+MultiContentEntryText(pos = (85,43), size = (410,20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+MultiContentEntryPixmapAlphaTest(pos = (2,8), size = (54,54), png = 3), # index 3 is the interface pixmap
+MultiContentEntryPixmapAlphaTest(pos = (63,46), size = (15,16), png = 4), # index 4 is the default pixmap
+],
+"fonts": [gFont("Regular",26),gFont("Regular",20)],
+"itemHeight": 70
+}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="center,330" size="744,30" font="Regular;24" halign="center"/>
+	</screen>
+
+	<screen name="NetworkAdapterTest" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<eLabel text="Network test..." position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="Adaptertext" position="0,0" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#1cff1c"/>
+		<widget name="Adapter" position="0,30" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="back"/>
+		<widget name="AdapterInfo_OK" position="315,15" size="38,31" zPosition="2" pixmap="Spark-E2/icons/lock_on.png" alphatest="on"/>
+		<widget name="AdapterInfo" position="365,7" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey"/>
+		<widget name="AdapterInfo_Text" position="365,7" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<eLabel position="0,60" size="744,1" backgroundColor="bluespark"/>
+		<widget name="Networktext" position="0,80" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#1cff1c"/>
+		<widget name="Network" position="0,110" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="back"/>
+		<widget name="NetworkInfo_Check" position="315,95" size="38,31" zPosition="2" pixmaps="Spark-E2/icons/lock_on.png,Spark-E2/icons/lock_error.png" alphatest="on"/>
+		<widget name="NetworkInfo" position="365,87" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey"/>
+		<widget name="NetworkInfo_Text" position="365,87" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<eLabel position="0,140" size="744,1" backgroundColor="bluespark"/>
+		<widget name="Dhcptext" position="0,160" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#1cff1c"/>
+		<widget name="Dhcp" position="0,190" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="back"/>
+		<widget name="DhcpInfo_Check" position="315,185" size="38,31" zPosition="2" pixmaps="Spark-E2/icons/lock_on.png,Spark-E2/icons/lock_error.png" alphatest="on"/>
+		<widget name="DhcpInfo" position="365,167" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey"/>
+		<widget name="DhcpInfo_Text" position="365,167" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<eLabel position="0,220" size="744,1" backgroundColor="bluespark"/>
+		<widget name="IPtext" position="0,240" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#1cff1c"/>
+		<widget name="IP" position="0,270" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="back"/>
+		<widget name="IPInfo_Check" position="315,255" size="38,31" zPosition="2" pixmaps="Spark-E2/icons/lock_on.png,Spark-E2/icons/lock_error.png" alphatest="on"/>
+		<widget name="IPInfo" position="365,247" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey"/>
+		<widget name="IPInfo_Text" position="365,247" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<eLabel position="0,300" size="744,1" backgroundColor="bluespark"/>
+		<widget name="DNStext" position="0,320" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#1cff1c"/>
+		<widget name="DNS" position="0,350" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="back"/>
+		<widget name="DNSInfo_Check" position="315,335" size="38,31" zPosition="2" pixmaps="Spark-E2/icons/lock_on.png,Spark-E2/icons/lock_error.png" alphatest="on"/>
+		<widget name="DNSInfo" position="365,327" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey" transparent="1"/>
+		<widget name="DNSInfo_Text" position="365,327" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<eLabel position="0,380" size="744,1" backgroundColor="bluespark"/>
+		<widget name="EditSettingsButton" position="365,397" size="160,40" zPosition="1" pixmaps="Spark-E2/menu/select300_45black.png,Spark-E2/buttons/sel.png" backgroundColor="transpGrey"/>
+		<widget name="EditSettings_Text" position="365,397" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#ffffff,#ffffff,#ffffff" backgroundColor="back" transparent="1"/>
+		<widget name="InfoText" position="365,0" size="379,450" zPosition="3" font="Regular;22" halign="center" valign="center" backgroundColor="bluespark"/>
+		<widget name="InfoTextBorder" position="365,0" size="379,450"/>
+	</screen>
+
+	<screen name="NetworkBrowser" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYBS_Template"/>
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="list" render="Listbox" position="center,0" size="744,390" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 1), # index 1 is the expandable/expanded/verticalline icon
+MultiContentEntryText(pos = (70,4), size = (400,26), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
+MultiContentEntryText(pos = (160,5), size = (300,25), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
+MultiContentEntryText(pos = (160,26), size = (300,17), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the sharedescription
+MultiContentEntryPixmapAlphaTest(pos = (65,6), size = (48,48), png = 5), # index 5 is the nfs/cifs icon
+MultiContentEntryPixmapAlphaTest(pos = (110,6), size = (48,48), png = 6), # index 6 is the isMounted icon
+],
+"fonts": [gFont("Regular",20),gFont("Regular",15),gFont("Regular",22)],
+"itemHeight": 60
+}
+			</convert>
+
+		</widget>
+		<widget source="infotext" render="Label" position="center,400" size="744,40" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="ScanIP" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYS_Template"/>
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,390" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="UserManager" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RYS_Template"/>
+		<panel name="AutoMountTemplate"/>
+		<widget source="config" render="Listbox" position="center,0" size="744,390" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (80,7), size = (650,50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 3), # index 4 is the status pixmap
+],
+"fonts": [gFont("Regular",40)],
+"itemHeight": 60
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="UserDialog" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="AutoMountConfigTemplate"/>
+	</screen>
+
+	<screen name="AutoMountEdit" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="AutoMountConfigTemplate"/>
+	</screen>
+
+	<screen name="AutoMountManager" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RS_Template"/>
+		<panel name="AutoMountTemplate"/>
+		<widget source="config" render="Listbox" position="center,0" size="744,390">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60,5), size = (620,28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+						MultiContentEntryText(pos = (70,35), size = (610,20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+						MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 3), # index 4 is the pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="AutoMountView" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RYS_Template"/>
+<!--		<eLabel text="Mounts management" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="legend1" render="Label" position="0,0" size="172,60" font="Regular;18" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget source="legend2" render="Label" position="center,0" size="400,60" font="Regular;20" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget source="legend3" render="Label" position="572,0" size="172,60" font="Regular;20" halign="center" valign="center" foregroundColor="yellow"/>
+		<eLabel position="center,77" size="744,1" backgroundColor="bluespark"/>
+		<widget source="config" render="Listbox" position="center,92" size="744,298" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (40,6), size = (48,48), png = 0), # index 0 is the isMounted pixmap
+						MultiContentEntryText(pos = (210,5), size = (200,28), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
+						MultiContentEntryText(pos = (390,8), size = (250,20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
+						MultiContentEntryText(pos = (210,35), size = (350,20), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
+						MultiContentEntryPixmapAlphaTest(pos = (600,15), size = (48,48), png = 4), # index 4 is the activepng pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (630,6), size = (48,48), png = 5), # index 4 is the mounttype pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="center,400" size="744,40" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="HarddiskSetup" position="340,134" size="600,502">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey"/>
+		<widget name="model" position="10,20" size="580,28" font="Regular;25" halign="center"/>
+		<widget name="capacity" position="10,60" size="580,28" font="Regular;25" halign="center"/>
+		<widget name="bus" position="10,100" size="580,28" font="Regular;25" halign="center"/>
+		<eLabel position="0,460" size="600,2" backgroundColor="grey"/>
+		<widget name="initializetext" position="20,467" size="580,30" font="Regular;24" halign="center" foregroundColor="red"/>
+	</screen>
+
+	<screen name="NumericalTextInputHelpDialog" position="center,580" size="484,122" zPosition="10" flags="wfNoBorder">
+		<eLabel position="0,0" size="484,122" backgroundColor="transparent" zPosition="-1"/>
+		<widget name="key1" position="2,2" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key2" position="162,2" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key3" position="322,2" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key4" position="2,32" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key5" position="162,32" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key6" position="322,32" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key7" position="2,62" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key8" position="162,62" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key9" position="322,62" size="160,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="help1" position="2,92" size="130,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key0" position="132,92" size="220,30" font="Regular;18" valign="center" halign="center"/>
+		<widget name="help2" position="352,92" size="130,30" font="Regular;18" valign="center" halign="center"/>
+	</screen>
+
+	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RG_Template"/>
+		<eLabel text="CrashlogAutoSubmit settings..." position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="config" position="329,135" size="631,300" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="VKeyIcon" pixmap="Spark-E2/buttons/key_text.png" position="288,556" zPosition="2" size="60,48" transparent="1" alphatest="on"/>
+		<widget name="HelpWindow" position="180,445" size="1,1" transparent="1"/>
+		<widget source="status" render="Label" position="630,438" size="330,160" font="Regular;22" foregroundColor="green" halign="center"/>
+	</screen>
+
+	<screen name="CiSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreenTemplate"/>
+		<eLabel text="Common Interface" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="text" position="center,150" size="631,30" font="Regular;24" halign="center" valign="center"/>
+		<widget name="entries" position="center,200" size="631,300" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="CIselectMainMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RG_Template"/>
+		<eLabel text="CI assignment" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="CiList" position="center,150" size="631,300" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	</screen>
+
+	<screen name="RecordPathsSettings" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGS_Template"/>
+<!--		<eLabel text="Recording paths" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,187" sliderPixmap="Spark-E2/window/slider_vert.png" transparent="1"/>
+	</screen>
+
+	<screen name="InputDeviceSetup" position="center,170" size="560,440">
+		<widget source="key_red" render="Label" position="0,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="137,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="273,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="408,1" size="150,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="10,36" size="120,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="150,36" size="120,1" foregroundColor="green" backgroundColor="green"/>
+		<eLabel name="Yellow" position="290,36" size="120,1" foregroundColor="yellow" backgroundColor="yellow"/>
+		<eLabel name="Blue" position="430,36" size="120,1" foregroundColor="blue" backgroundColor="blue"/>
+		<widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<ePixmap pixmap="Spark-E2/window/div-h.png" position="0,400" size="560,2"/>
+		<widget source="introduction" render="Label" position="5,410" size="550,30" font="Regular;21" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="VideoEnhancementSetup" position="center,center" size="660,440">
+		<panel name="ButtonTemplate_RGYB_Small"/>
+		<widget name="config" position="5,5" size="650,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget source="introduction" render="Label" position="5,360" size="650,30" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="VideoEnhancementPreview" position="360,140" size="560,170">
+		<widget name="key_red" position="124,126" size="160,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="286,126" size="160,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="124,160" size="160,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="286,160" size="160,1" foregroundColor="green" backgroundColor="green"/>
+		<widget name="config" position="5,5" size="550,80" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<ePixmap pixmap="Spark-E2/window/div-h.png" position="0,120" size="560,2"/>
+		<widget source="introduction" render="Label" position="5,90" size="550,30" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+	<screen name="FancontrolConfiguration" position="center,center" size="560,300">
+		<widget name="key_red" position="124,255" size="160,35" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" position="286,255" size="160,35" font="Regular;22" halign="center" valign="center"/>
+		<eLabel name="Red" position="124,290" size="160,1" foregroundColor="red" backgroundColor="red"/>
+		<eLabel name="Green" position="286,290" size="160,1" foregroundColor="green" backgroundColor="green"/>
+		<widget name="config" position="5,50" size="550,200" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<ePixmap pixmap="Spark-E2/window/div-h.png" position="0,250" size="560,2"/>
+	</screen>
+	<screen name="StandbySummary" position="0,0" size="132,64">
+		<widget source="global.CurrentTime" render="Label" position="0,0" size="132,64" font="Regular;30" halign="center" valign="center">
+			<convert type="ClockToText">Format:%H:%M-%h.%d</convert>
+		</widget>
+	</screen>
+
+	<screen name="HotkeySetup" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RG_Template"/>
+<!--		<eLabel text="Hotkey" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="list" position="0,0" size="372,455" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeight="30"/>
+		<widget name="choosen" position="372,0" size="372,455" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" itemHeight="30"/>
+	</screen>
+
+	<screen name="HdmiCECSetupScreen" position="center,138" size="744,500" backgroundColor="bsback">
+		<panel name="MidleScreen_RGYBS_Template"/>
+<!--		<eLabel text="HDMI-CEC setup" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,390" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel name="Line" position="center,395" size="744,1" backgroundColor="bluespark"/>
+		<widget source="current_address" render="Label" position="center,400" size="550,28" font="Regular;22" halign="center"/>
+		<widget source="fixed_address" render="Label" position="center,430" size="550,28" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="AltCamManager" position="center,190" size="680,400" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGYBS_Minimal"/>
+<!--		<widget source="Title" render="Label" position="375,160" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="list" render="Listbox" position="0,0" size="340,300" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+			{
+				"template": [MultiContentEntryText(pos=(65,10), size=(275,40), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryPixmapAlphaTest(pos=(5,5), size=(51,40), png=1),
+					MultiContentEntryText(pos=(5,25), size=(51,16), font=1, flags=RT_HALIGN_CENTER, text=2),],
+				"fonts": [gFont("Regular",26), gFont("Regular",12)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>
+		<eLabel text="Ecm info" halign="center" position="340,0" size="340,35" font="Regular;26" foregroundColor="yellow"/>
+		<widget name="status" position="370,50" size="330,280" font="Regular;22"/>
+	</screen>
+
+	<screen name="ConfigEdit" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreen_RGS_Template"/>
+		<widget source="Title" render="Label" position="375,160" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget name="config" position="center,210" size="580,150" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<widget name="HelpWindow" position="400,370" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on" />
+	</screen>
+
+	<screen name="TV3PlayMenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MidleScreen_RGS_Template"/>
+		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+		<widget source="list" render="Listbox" position="285,120" size="400,450" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+			<convert type="TemplatedMultiContent">
+			{
+				"template": [MultiContentEntryText(pos=(10,1), size=(340,30), font=0, flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 30
+			}
+			</convert>
+		</widget>
+		<widget name="pic" position="720,120" size="250,141" alphatest="on"/>
+		<widget name="cur" position="700,270" size="295,330" halign="center" font="Regular;26" foregroundColor="yellow"/>
+	</screen>
+
+	<screen name="EPGSearchSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MinimalScreen_RGS_Template"/>
+		<widget source="Title" render="Label" position="center,155" size="600,34" halign="center" font="Replacement;26" foregroundColor="hellgreen" backgroundColor="transpGrey" transparent="1"/>
+		<widget name="config" position="center,210" size="580,240" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel name="Line" position="center,456" size="600,1" backgroundColor="lineback"/>
+		<widget source="help" render="Label" position="center,460" size="580,60" font="Regular;22"/>
+	</screen>
+</skin>
+

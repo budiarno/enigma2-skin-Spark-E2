@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+
+	<screen name="infobartemplate" flags="wfBorder">
+		<!-- From HDMU -->
+<!--		<ePixmap pixmap="Spark-E2/infobar/Infobar2a.png" position="center,103" size="800,500" alphatest="blend" zPosition="-20"/> -->
+		<eLabel name="Line" position="775,0" size="2,274" backgroundColor="bluespark"/>
+		<eLabel name="spn" text="Service Provider" position="14,14" size="250,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+	<widget source="session.CurrentService" render="Label" position="269,14" size="500,29" transparent="1" zPosition="1" foregroundColor="teks" font="Regular;23" halign="left">
+		<convert type="PliExtraInfo2">ProviderInfo</convert>
+	</widget>
+
+		<eLabel name="cas" text="CA System" position="14,48" size="250,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label" halign="left" position="269,48" size="500,29" backgroundColor="bsback" foregroundColor="teks" font="Regular;23" transparent="1" textWrap="1">
+					   <convert type="PliExtraInfo2">CryptoBar</convert>
+				</widget>
+
+		<eLabel name="com" text="CA Operation Mode" position="14,82" size="250,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+<!--		<widget backgroundColor="bsback" foregroundColor="teks" font="Regular;23" halign="left" noWrap="1" position="269,82" render="Label" size="100,29" source="session.CurrentService" transparent="1" zPosition="50">
+			<convert type="MambasInfo">emuname</convert>
+		</widget> -->
+    	<widget source="session.CurrentService" render="Label" position="269,82" size="501,29" backgroundColor="bsback" font="Regular; 23" transparent="1" zPosition="21" halign="left">
+      		<convert type="CIInfo">Emuku</convert>
+    	</widget>
+
+		<!-- PIDs -->
+		<eLabel name="vpid" text="Video PID" position="259,155" size="120,29" font="Regular;23" halign="Left" backgroundColor="black" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label"    position="384,155" size="70,29" font="Regular;23" halign="left" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+                     <convert type="QuickEcmInfo2">vpid</convert>
+        		</widget>
+
+		<!-- Video Resolution -->
+		<widget backgroundColor="black" font="Regular;21" foregroundColor="teks" halign="right" position="860,284" render="Label" size="50,23" source="session.CurrentService" transparent="1" valign="bottom">
+			<convert type="ServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel backgroundColor="black" font="Regular;20" foregroundColor="teks" halign="center" position="918,283" size="17,23" text="x" transparent="1" valign="bottom" />
+		<widget backgroundColor="black" font="Regular;21" foregroundColor="teks" halign="left" position="938,284" render="Label" size="50,23" source="session.CurrentService" transparent="1" valign="bottom">
+			<convert type="ServiceInfo">VideoHeight</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="464,155" size="135,29" backgroundColor="black" foregroundColor="teks" font="Regular;23" transparent="1">
+			<convert type="Bitrate2">VideoBitrate</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="609,155" size="165,29" backgroundColor="black" foregroundColor="teks" font="Regular;23" transparent="1">
+			<convert type="QuickEcmInfo">vtype</convert>
+		</widget>
+
+		<eLabel name="vres" text="Res:" position="14,155" size="45,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="59,155" size="170,29" backgroundColor="black" foregroundColor="teks" halign="right" font="Regular;23" transparent="1">
+			<convert type="QuickEcmInfo2">vres</convert>
+		</widget>
+
+		<eLabel name="apid" text="Audio PID" position="259,121" size="120,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label"    position="384,121" size="70,29" font="Regular;23" halign="left" backgroundColor="bsback" foregroundColor="teks" transparent="1">
+                       <convert type="QuickEcmInfo2">apid</convert>
+                </widget>
+
+		<widget source="session.CurrentService" render="Label" position="609,121" size="165,29" backgroundColor="bsback" foregroundColor="teks" font="Regular;23" transparent="1">
+			<convert type="HDMUAudioInfo">AudioCodec</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="464,121" size="135,29" backgroundColor="bsback" foregroundColor="teks" font="Regular;23" transparent="1">
+			<convert type="Bitrate2">AudioBitrate</convert>
+		</widget>
+
+		<eLabel name="sid" text="Service ID" position="14,121" size="120,29" font="Regular;23" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label"    position="139,121" size="100,29" font="Regular;23" halign="left" backgroundColor="black" foregroundColor="teks" transparent="1">
+                       <convert type="QuickEcmInfo2">sid</convert>
+                </widget>
+
+		<eLabel name="tpid" text="Text PID" position="262,390" size="120,23" font="Regular;21" halign="Left" backgroundColor="black" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label"    position="390,390" size="100,23" font="Regular;21" halign="right" backgroundColor="black" foregroundColor="teks" transparent="1">
+                       <convert type="ServiceInfo">TxtPid</convert>
+		</widget>
+		<eLabel name="di" text="Decryption Info" position="800,0" size="281,29" font="Regular;21" halign="Left" backgroundColor="bsback" foregroundColor="teks" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="800,29" size="281,245" font="Regular;19" backgroundColor="bsback" foregroundColor="teks" transparent="1" valign="top" textWrap="1" halign="left">
+    		<convert type="QuickEcmInfo2">cw</convert>
+  		</widget>
+		<widget source="session.Event_Now" render="Label" position="14,194" size="755,75" halign="left" font="Regular;21" backgroundColor="black" foregroundColor="teks" transparent="1" zPosition="1">
+			<convert type="EventName2">FullDescription</convert>
+		</widget>
+	</screen>
+
+</skin>
