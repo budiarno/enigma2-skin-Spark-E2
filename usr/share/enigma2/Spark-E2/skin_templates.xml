@@ -207,14 +207,14 @@
 
 	<screen name="ButtonTemplate_CancelOK_Midle">
 		<panel name="ButtonTemplate_Midle_RG"/>
-		<widget name="canceltext" position="380,614" size="250,33" font="Regular;22" halign="center" valign="center"/>
-		<widget name="oktext" position="650,614" size="250,33" font="Regular;22" halign="center" valign="center"/>
+		<widget name="canceltext" position="98,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
+		<widget name="oktext" position="470,470" size="372,33" font="Regular;22" halign="left" valign="center"/>
 	</screen>
 
 	<screen name="ButtonTemplate_CancelScan_Midle">
 		<panel name="ButtonTemplate_Midle_RG"/>
-		<eLabel text="Cancel" position="106,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
-		<eLabel text="Scan" position="478,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+		<eLabel text="Cancel" position="98,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
+		<eLabel text="Scan" position="470,470" size="250,33" font="Regular;22" halign="left" valign="center"/>
 	</screen>
 
 	<screen name="ButtonTemplate_RG_Midle">
@@ -551,7 +551,7 @@
 	</screen>
 
 	<screen name="MidleScreen_CancelOK_Template">
-		<panel name="MidleScreenTemplate"/>
+<!--		<panel name="MidleScreenTemplate"/> -->
 		<panel name="ButtonTemplate_CancelOK_Midle"/>
 	</screen>
 

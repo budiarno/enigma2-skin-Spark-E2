@@ -577,10 +577,10 @@ self.instance.move(ePoint((1280-wsizex) / 2, (720 - wsizey) / (count > 7 and 2 o
 		<widget name="timeline_now" position="0,25" zPosition="2" size="15,446" pixmap="Spark-E2/window/timeline-now.png" alphatest="on"/>
 	</screen>
 
-	<screen name="GraphMultiEpgSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="GraphMultiEpgSetup" position="center,138" size="744,500" backgroundColor="bsback">
 		<panel name="MidleScreen_CancelOK_Template"/>
-		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
-		<widget name="config" position="center,120" size="700,490" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+<!--		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="744,450" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
 	</screen>
 
 	<screen name="HarddiskSelection" position="center,190" size="620,420" backgroundColor="bsback">
@@ -1077,7 +1077,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) / 2, orgpos.y() + (
 		<panel name="ButtonTemplate_RS_Midle"/>
 <!--		<eLabel text="Select a skin" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
 		<widget name="SkinList" position="0,0" size="424,420" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png"/>
-		<widget name="Preview" position="447,20" size="280,210" alphatest="off"/>
+		<widget name="Preview" position="447,20" size="280,210" alphatest="on"/>
 		<widget source="introduction" render="Label" position="center,430" size="744,25" font="Regular;22" halign="center"/>
 	</screen>
 
@@ -1637,9 +1637,9 @@ MultiContentEntryText(pos = (0,0), size = (744,138), flags = RT_HALIGN_CENTER|RT
 		<widget source="status" render="Label" position="center,520" size="700,30" halign="center" valign="center" font="Regular;22"/>
 	</screen>
 
-	<screen name="UpdatePlugin" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MinimalScreenTemplate"/>
-		<eLabel text="Software update" position="370,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
+	<screen name="UpdatePlugin" position="center,138" size="744,500" backgroundColor="bsback">
+<!--		<panel name="MinimalScreenTemplate"/>
+		<eLabel text="Software update" position="370,158" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
 		<widget name="activityslider" position="center,210" size="550,10" foregroundColor="grey" borderWidth="1"/>
 		<widget source="package" render="Label" position="center,240" size="540,20" font="Regular;18" halign="center" valign="center"/>
 		<widget source="status" render="Label" position="center,270" size="540,45" font="Regular;20" halign="center" valign="center"/>
