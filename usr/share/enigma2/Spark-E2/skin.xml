@@ -559,22 +559,22 @@ self.instance.move(ePoint((1280-wsizex) / 2, (720 - wsizey) / (count > 7 and 2 o
 		</widget>
 	</screen>
 
-	<screen name="GraphMultiEPGList" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="GraphMultiEPGList" position="center,138" size="744,500" backgroundColor="bsback">
 		<panel name="MidleScreen_RGYB_Template"/>
-		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
-		<widget name="timeline_text" position="center,120" size="700,26"/>
-		<widget name="list" position="center,155" size="700,420" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
-		<eLabel position="center,155" size="700,1" backgroundColor="darkgrey"/>
-		<eLabel position="center,574" size="700,1" backgroundColor="darkgrey"/>
-		<eLabel position="290,155" size="1,420" backgroundColor="darkgrey"/>
-		<eLabel position="990,155" size="1,420" backgroundColor="darkgrey"/>
-		<widget name="timeline0" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline1" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline2" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline3" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline4" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline5" position="60,158" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
-		<widget name="timeline_now" position="60,145" zPosition="2" size="15,446" pixmap="Spark-E2/window/timeline-now.png" alphatest="on"/>
+<!--		<widget source="Title" render="Label" position="312,71" size="740,50" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="timeline_text" position="center,0" size="744,26" backgroundColor="bsback" transparent="1"/>
+		<widget name="list" position="center,35" size="744,420" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+		<eLabel position="center,35" size="744,1" backgroundColor="darkgrey"/>
+		<eLabel position="center,454" size="744,1" backgroundColor="darkgrey"/>
+		<eLabel position="0,35" size="1,420" backgroundColor="darkgrey"/>
+		<eLabel position="700,35" size="1,420" backgroundColor="darkgrey"/>
+		<widget name="timeline0" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline1" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline2" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline3" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline4" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline5" position="0,38" zPosition="1" size="1,417" pixmap="Spark-E2/window/timeline.png"/>
+		<widget name="timeline_now" position="0,25" zPosition="2" size="15,446" pixmap="Spark-E2/window/timeline-now.png" alphatest="on"/>
 	</screen>
 
 	<screen name="GraphMultiEpgSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
