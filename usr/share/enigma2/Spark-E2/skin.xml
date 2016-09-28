@@ -1447,20 +1447,20 @@ MultiContentEntryText(pos = (470,20), size = (48,20), font = 1, flags = RT_HALIG
 
 	</screen>
 
-	<screen name="picshow" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="picshow" position="center,138" size="744,500" backgroundColor="bsback">
 		<panel name="MidleScreen_RGYS_Template"/>
-		<eLabel text="Picture player" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
-		<widget name="thn" position="290,150" size="260,300" alphatest="on"/>
-		<widget name="filelist" position="570,center" size="420,465" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+<!--		<eLabel text="Picture player" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="thn" position="352,0" size="392,448" alphatest="on"/>
+		<widget name="filelist" position="0,0" size="342,458" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png"/>
 	</screen>
 
-	<screen name="Pic_Exif" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="Pic_Exif" position="center,138" size="744,500" backgroundColor="bsback">
 		<panel name="MidleScreen_RS_Template"/>
-		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
-		<widget source="menu" render="Listbox" position="center,center" size="705,425" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1">
+<!--		<widget source="Title" render="Label" position="312,71" size="735,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget source="menu" render="Listbox" position="0,0" size="744,458" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (5,7), size = (350,30), flags = RT_HALIGN_LEFT, text = 0),
-MultiContentEntryText(pos = (360,7), size = (215,30), flags = RT_HALIGN_LEFT, text = 1)],
+MultiContentEntryText(pos = (360,7), size = (394,30), flags = RT_HALIGN_LEFT, text = 1)],
 "fonts": [gFont("Regular",20)],
 "itemHeight": 35 }
 			</convert>
