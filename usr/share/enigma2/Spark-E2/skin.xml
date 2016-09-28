@@ -2092,6 +2092,7 @@ MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 3), # index
 	<screen name="VideoEnhancementSetup" position="center,center" size="660,440">
 		<panel name="ButtonTemplate_RGYB_Small"/>
 		<widget name="config" position="5,5" size="650,350" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+
 		<widget source="introduction" render="Label" position="5,360" size="650,30" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
@@ -2137,7 +2138,7 @@ MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 3), # index
 	<screen name="AltCamManager" position="center,190" size="680,400" backgroundColor="bsback">
 		<panel name="ButtonTemplate_RGYBS_Minimal"/>
 <!--		<widget source="Title" render="Label" position="375,160" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
-		<widget source="list" render="Listbox" position="0,0" size="340,300" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png">
+		<widget source="list" render="Listbox" position="0,0" size="340,300" enableWrapAround="1" scrollbarMode="showAlways" sliderPixmap="Spark-E2/window/slider_vert.png">
 			<convert type="TemplatedMultiContent">
 			{
 				"template": [MultiContentEntryText(pos=(65,10), size=(275,40), font=0, flags=RT_HALIGN_LEFT, text=0),
@@ -2148,14 +2149,15 @@ MultiContentEntryPixmapAlphaTest(pos = (10,6), size = (48,48), png = 3), # index
 			}
 			</convert>
 		</widget>
-		<eLabel text="Ecm info" halign="center" position="340,0" size="340,35" font="Regular;26" foregroundColor="yellow"/>
+		<eLabel text="Ecm info" halign="center" position="360,0" size="320,35" font="Regular;26" foregroundColor="yellow"/>
 		<widget name="status" position="370,50" size="330,280" font="Regular;22"/>
 	</screen>
 
-	<screen name="ConfigEdit" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MinimalScreen_RGS_Template"/>
-		<widget source="Title" render="Label" position="375,160" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/>
-		<widget name="config" position="center,210" size="580,150" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
+	<screen name="ConfigEdit" position="center,190" size="680,400" backgroundColor="bsback">
+		<panel name="ButtonTemplate_RGYBS_Minimal2"/>
+<!--		<panel name="MinimalScreen_RGS_Template"/> -->
+<!--		<widget source="Title" render="Label" position="375,160" size="600,34" halign="left" font="Replacement;22" foregroundColor="titlefore" backgroundColor="titleback" transparent="1"/> -->
+		<widget name="config" position="center,0" size="680,350" enableWrapAround="1" scrollbarMode="showOnDemand" sliderPixmap="Spark-E2/window/slider_vert.png"/>
 		<widget name="HelpWindow" position="400,370" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on" />
 	</screen>
 

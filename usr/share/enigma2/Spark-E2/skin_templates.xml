@@ -127,11 +127,17 @@
 	</screen>
 
 	<screen name="ButtonTemplate_Minimal_RGYB">
-		<eLabel name="Line" position="center,368" size="680,1" backgroundColor="bluespark"/>
-		<eLabel name="Red" position="10,399" size="150,1" foregroundColor="red" backgroundColor="red"/>
-		<eLabel name="Green" position="180,399" size="150,1" foregroundColor="green" backgroundColor="green"/>
-		<eLabel name="Yellow" position="350,399" size="150,1" foregroundColor="yellow" backgroundColor="yellow"/>
-		<eLabel name="Blue" position="520,399" size="150,1" foregroundColor="blue" backgroundColor="blue"/>
+		<eLabel name="Line" position="center,360" size="680,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="10,370" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="180,370" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/kuningm.png" position="350,370" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/birum.png" position="520,370" size="30,30" alphatest="on" zPosition="4"/>
+	</screen>
+
+	<screen name="ButtonTemplate_Minimal_RGYB2">
+		<eLabel name="Line" position="center,360" size="680,1" backgroundColor="bluespark"/>
+    	<ePixmap pixmap="Spark-E2/buttons/merahm.png" position="130,370" size="30,30" alphatest="on" zPosition="4"/>
+    	<ePixmap pixmap="Spark-E2/buttons/hijaum.png" position="470,370" size="30,30" alphatest="on" zPosition="4"/>
 	</screen>
 
 	<screen name="ButtonTemplate_Minimal_RGY">
@@ -166,10 +172,16 @@
 
 	<screen name="ButtonTemplate_RGYBS_Minimal">
 		<panel name="ButtonTemplate_Minimal_RGYB"/>
-		<widget source="key_red" render="Label" position="0,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
-		<widget source="key_green" render="Label" position="170,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
-		<widget source="key_yellow" render="Label" position="340,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
-		<widget source="key_blue" render="Label" position="510,370" size="170,33" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_red" render="Label" position="50,370" size="170,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_green" render="Label" position="220,370" size="170,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_yellow" render="Label" position="390,370" size="170,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_blue" render="Label" position="560,370" size="170,33" font="Regular;22" halign="left" valign="center"/>
+	</screen>
+
+	<screen name="ButtonTemplate_RGYBS_Minimal2">
+		<panel name="ButtonTemplate_Minimal_RGYB2"/>
+		<widget source="key_red" render="Label" position="170,370" size="340,33" font="Regular;22" halign="left" valign="center"/>
+		<widget source="key_green" render="Label" position="510,370" size="340,33" font="Regular;22" halign="left" valign="center"/>
 	</screen>
 
 	<screen name="ButtonTemplate_YB_Minimal">

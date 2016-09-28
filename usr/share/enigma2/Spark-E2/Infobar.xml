@@ -16,7 +16,7 @@
 		<widget source="session.FrontendStatus" render="Progress"  position="838,116" size="187,9" pixmap="Spark-E2/infobar/S.png" borderWidth="0" borderColor="#000000" backgroundColor="#000000" transparent="1">
 			<convert type="FrontendInfo2">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1043,108" size="30,28" font="Regular;23" backgroundColor="black" foregroundColor="#dddddd" halign="center" transparent="0" >
+		<widget source="session.FrontendStatus" render="Label" position="1023,108" size="50,28" font="Regular;23" backgroundColor="black" foregroundColor="#dddddd" halign="center" transparent="0" >
 			<convert type="FrontendInfo2">SNR</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="980,139" size="90,28" font="Regular;23" halign="right" backgroundColor="black" foregroundColor="#dddddd" transparent="1">
