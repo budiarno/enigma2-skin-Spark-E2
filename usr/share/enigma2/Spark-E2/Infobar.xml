@@ -2,18 +2,20 @@
 <skin>
 	<!-- Templates -->
 	<screen name="Spark-E2">
-		<ePixmap pixmap="Spark-E2/infobar/InfobarUtama.png" position="center,center" size="1100,209" alphatest="blend" zPosition="-20"/>
+		<ePixmap pixmap="Spark-E2/infobar/InfobarUtama.png" position="center,center" size="1100,209" alphatest="blend" zPosition="-10"/>
 		<!-- LNB -->
+		<eLabel name="Line" position="838,85" size="195,10" backgroundColor="black" zPosition="-20"/>
 		<eLabel name="agc" text="L" position="808,77" size="20,28" font="Regular;23" halign="center" backgroundColor="black" foregroundColor="#dddddd" transparent="1" />
-		<widget source="session.FrontendStatus" render="Progress" position="838,85" size="187,9" pixmap="Spark-E2/infobar/L.png" borderWidth="0" borderColor="#000000" backgroundColor="#000000" transparent="1">
+		<widget source="session.FrontendStatus" render="Progress" position="838,85" size="192,9" pixmap="Spark-E2/infobar/L.png" borderWidth="0" borderColor="#000000" backgroundColor="bsback" transparent="1">
 			<convert type="FrontendInfo2">AGC</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="1033,77" size="40,28" font="Regular;23" backgroundColor="black" foregroundColor="#dddddd" halign="right" transparent="1">
 			<convert type="FrontendInfo2">AGC</convert>
 		</widget>
 		<!-- SNR -->
+		<eLabel name="Line" position="838,116" size="195,10" backgroundColor="black" zPosition="-20"/>
 		<eLabel name="snr" text="Q" position="808,108" size="20,28" font="Regular;23" halign="center" backgroundColor="black" foregroundColor="#dddddd" transparent="1" />
-		<widget source="session.FrontendStatus" render="Progress"  position="838,116" size="187,9" pixmap="Spark-E2/infobar/S.png" borderWidth="0" borderColor="#000000" backgroundColor="#000000" transparent="1">
+		<widget source="session.FrontendStatus" render="Progress"  position="838,116" size="192,9" pixmap="Spark-E2/infobar/S.png" borderWidth="0" borderColor="#000000" backgroundColor="bsback" transparent="1" zPosition="-15">
 			<convert type="FrontendInfo2">SNR</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="1033,108" size="40,28" font="Regular;23" backgroundColor="black" foregroundColor="#dddddd" halign="right" transparent="1" >
