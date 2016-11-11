@@ -1559,7 +1559,7 @@ MultiContentEntryText(pos = (0,0), size = (744,138), flags = RT_HALIGN_CENTER|RT
 		<widget source="introduction" render="Label" position="10,420" size="580,26" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
-	<screen name="IPKGSource" position="center,400" size="1160,100">
+	<screen name="IPKGSource" position="center,139" size="1160,100">
 		<widget source="key_red" render="Label" position="388,54" size="178,35" font="Regular;22" halign="center" valign="center"/>
 		<widget source="key_green" render="Label" position="607,54" size="178,35" font="Regular;22" halign="center" valign="center"/>
 		<eLabel name="Red" position="388,89" size="178,1" foregroundColor="red" backgroundColor="red"/>
