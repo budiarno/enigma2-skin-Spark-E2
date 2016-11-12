@@ -417,7 +417,7 @@
 		<ePixmap pixmap="Spark-E2/icons/sipeker.png" position="893,0" size="143,143" alphatest="blend" zPosition="-1"/>
 		<eLabel name="Line" position="690,148" size="376,1" backgroundColor="bluespark"/>
 		<eLabel name="Line" position="710,168" size="336,1" backgroundColor="bluespark"/>
-    	<widget source="session.CurrentService" render="PositionGauge" position="710,162" size="336,12" transparent="1" zPosition="4" pointer="PLi-HD/dvr/position_pointer1.png:417,0">
+    	<widget source="session.CurrentService" render="PositionGauge" position="710,162" size="336,12" transparent="1" zPosition="4" pointer="Spark-E2/dvr/position_pointer1.png:417,0">
       		<convert type="ServicePosition">Gauge</convert>
     	</widget>
 		<eLabel name="Line" position="690,188" size="376,1" backgroundColor="bluespark"/>
