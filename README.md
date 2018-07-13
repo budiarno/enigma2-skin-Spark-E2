@@ -22,4 +22,4 @@ Have fun!
 
 Budiarno
 
-www.dvbs.org
+https://dvb.pedode.com
